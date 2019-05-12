@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fake2edison.mapper.CommonMapper" >
+    <resultMap id="BaseResultMap" type="com.fake2edison.entity.Common">
+        <result column="menu_uuid" jdbcType="VARCHAR" property="menu_uuid"></result>
+        <result column="update_time" jdbcType="DATE" property="update_time"></result>
+        <result column="tag_name" jdbcType="VARCHAR" property="tag_name"></result>
+        <result column="store_num" jdbcType="INTEGER" property="store_num"></result>
+        <result column="status" jdbcType="INTEGER" property="status"></result>
+        <result column="source_editor" jdbcType="VARCHAR" property="source_editor"></result>
+        <result column="remark" jdbcType="VARCHAR" property="remark"></result>
+        <result column="pass" jdbcType="INTEGER" property="pass"></result>
+        <result column="name" jdbcType="VARCHAR" property="name"></result>
+        <result column="insert_time" jdbcType="DATE" property="insert_time"></result>
+        <result column="img_url" jdbcType="VARCHAR" property="img_url"></result>
+        <result column="height" jdbcType="INTEGER" property="height"></result>
+        <result column="flag" jdbcType="INTEGER" property="flag"></result>
+        <result column="content" jdbcType="VARCHAR" property="content"></result>
+        <result column="type" jdbcType="VARCHAR" property="type"></result>
+    </resultMap>
+    <select id="getCommon" resultMap="BaseResultMap">
+        SELECT
+        *
+        FROM Common
+        <if test="code != 'all'">
+            WHERE type = #{code}
+        </if>
+        limit #{item}
+    </select>
+
+    <select id="getFavoriteByUserId" resultMap="BaseResultMap">
+        SELECT
+        *
+        from Common JOIN Favorites
+        ON Common.menu_uuid = Favorites.cid
+        WHERE Favorites.uid = #{uid}
+        <if test="code != 'all'">
+         and Common.type = #{code}
+        </if>
+        limit #{item}
+    </select>
+
+    <update id="addFavoritesByUUID">
+        UPDATE Common
+        SET height = height + 1
+        WHERE menu_uuid = #{menu_uuid}
+    </update>
+
+    <update id="removeFavoritesByUUID">
+        UPDATE Common
+        SET height = height - 1
+        WHERE menu_uuid = #{menu_uuid}
+    </update>
+
+    <select id="selectCommonByPage" resultMap="BaseResultMap">
+        SELECT *
+        FROM Common
+        limit #{pre_page},#{last_page}
+    </select>
+
+    <update id="addStyleHot">
+        UPDATE Common
+        set height = height + 100
+        where menu_uuid = #{menu_uuid}
+    </update>
+
+    <select id="countStyle" resultType="INTEGER">
+        select count(menu_uuid)
+        FROM Common
+    </select>
+</mapper>

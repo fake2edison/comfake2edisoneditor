@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fake2edison.mapper.UserMapper" >
+    <resultMap id="BaseResultMap" type="com.fake2edison.entity.User">
+        <id column="id" jdbcType="INTEGER" property="id"></id>
+        <result column="name" jdbcType="VARCHAR" property="name"></result>
+        <result column="telephone" jdbcType="VARCHAR" property="telephone"></result>
+        <result column="sex" jdbcType="INTEGER" property="sex"></result>
+        <result column="passwd" jdbcType="VARCHAR" property="passwd"></result>
+        <result column="img" jdbcType="VARCHAR" property="img"></result>
+        <result column="birth" jdbcType="DATE" property="birth"></result>
+        <result column="favorite_limit" jdbcType="INTEGER" property="favorite_limit"></result>
+        <result column="photo_limit" jdbcType="INTEGER" property="photo_limit"></result>
+        <result column="template_limit" jdbcType="INTEGER" property="template_limit"></result>
+        <result column="gif_limit" jdbcType="INTEGER" property="gif_limit"></result>
+        <result column="apply_limit" jdbcType="INTEGER" property="apply_limit"></result>
+        <result column="is_admin" jdbcType="INTEGER" property="is_admin"></result>
+    </resultMap>
+    <select id="selectUserByLogin" resultMap="BaseResultMap">
+        select
+        *
+        from User
+        where telephone = #{account} and passwd = #{password}
+    </select>
+    <select id="selectUserByTelephone" resultMap="BaseResultMap">
+        SELECT
+        *
+        from User
+        where telephone = #{telephone}
+    </select>
+    <insert id="insertUserInRegiest">
+        INSERT into
+        User(name,telephone,passwd)
+        VALUES (#{account},#{telephone},#{password})
+    </insert>
+    <select id="selectUserByPage" resultMap="BaseResultMap">
+        SELECT
+        *
+        FROM User
+        limit #{pre_page},#{last_page}
+    </select>
+    <update id="addAdminByUserId">
+        UPDATE
+        User
+        SET is_admin = 1
+        where id = #{uid}
+    </update>
+    <update id="removeAdminByUserId">
+        UPDATE
+        User
+        SET is_admin = 0
+        where id = #{uid}
+    </update>
+    <select id="countUser" resultType="INTEGER">
+        select count(id)
+        from User
+    </select>
+</mapper>

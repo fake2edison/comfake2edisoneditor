@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fake2edison.mapper.WeiboUserMapper" >
+    <resultMap id="BaseResultMap" type="com.fake2edison.entity.WeiboUser">
+        <id column="id" jdbcType="INTEGER" property="id"></id>
+        <result column="uid" jdbcType="INTEGER" property="uid"></result>
+        <result column="wid" jdbcType="VARCHAR" property="wid"></result>
+    </resultMap>
+    <insert id="insertWeiboUser">
+        INSERT into
+        WeiboUser(uid,wid)
+        VALUES (#{uid},#{wid})
+    </insert>
+    <select id="getWidByUid" resultType="STRING">
+        select wid
+        FROM WeiboUser
+        WHERE uid = #{uid}
+    </select>
+</mapper>

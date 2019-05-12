@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fake2edison.mapper.SyncHistoryMapper" >
+    <resultMap id="BaseResultMap" type="com.fake2edison.entity.SyncHistory">
+        <id column="id" jdbcType="INTEGER" property="id"></id>
+        <result column="uid" jdbcType="INTEGER" property="uid"></result>
+        <result column="wid" jdbcType="VARCHAR" property="wid"></result>
+        <result column="contentid" jdbcType="INTEGER" property="contentid"></result>
+        <result column="wname" jdbcType="VARCHAR" property="wname"></result>
+        <result column="publishtime" jdbcType="DATE" property="publishname"></result>
+        <result column="title" jdbcType="VARCHAR" property="title"></result>
+    </resultMap>
+
+    <select id="selectSyncHistoryByUserId" resultMap="BaseResultMap">
+        SELECT
+        *
+        FROM SyncHistory
+        WHERE
+        uid = #{uid}
+    </select>
+
+    <insert id="insertSyncHistory">
+        INSERT INTO
+        SyncHistory(uid,wid,contentid,wname,title)
+        VALUES (#{uid},#{wid},#{contentid},#{wname},#{title})
+    </insert>
+
+    <select id="selectSyncHistory" resultMap="BaseResultMap">
+        SELECT
+        *
+        FROM SyncHistory
+    </select>
+
+    <!--<select id="countSync" resultMap="CountResultMap">-->
+        <!--SELECT count(contentid) AS num,title-->
+        <!--FROM SyncHistory-->
+        <!--GROUP BY contentid-->
+        <!--ORDER BY count(contentid) desc-->
+    <!--</select>-->
+</mapper>

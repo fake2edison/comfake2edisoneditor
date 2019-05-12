@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fake2edison.mapper.FavoritesMapper" >
+    <resultMap id="BaseResultMap" type="com.fake2edison.entity.Favorites">
+        <id column="id" jdbcType="INTEGER" property="id"></id>
+        <result column="uid" jdbcType="INTEGER" property="uid"></result>
+        <result column="cid" jdbcType="VARCHAR" property="cid"></result>
+    </resultMap>
+
+    <select id="getFavoritesByUser" resultType="STRING">
+        SELECT
+        cid
+        FROM Favorites
+        WHERE
+        uid = #{uid}
+    </select>
+
+    <insert id="addFavoritesByUser">
+        INSERT INTO
+        Favorites(uid,cid)
+        VALUES (#{uid},#{cid})
+    </insert>
+
+    <delete id="delFavoritesByUser">
+        DELETE FROM
+        Favorites
+        WHERE uid = #{uid} AND cid = #{cid}
+    </delete>
+</mapper>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fake2edison.mapper.TemplateMapper" >
+    <resultMap id="BaseResultMap" type="com.fake2edison.entity.Template">
+        <id column="id" jdbcType="INTEGER" property="id"></id>
+        <result column="uid" jdbcType="INTEGER" property="uid"></result>
+        <result column="statue" jdbcType="INTEGER" property="statue"></result>
+        <result column="intime" jdbcType="DATE" property="insert_time"></result>
+        <result column="content" jdbcType="VARCHAR" property="content"></result>
+        <result column="summary" jdbcType="VARCHAR" property="summary"></result>
+        <result column="title" jdbcType="VARCHAR" property="title"></result>
+        <result column="templateimg" jdbcType="VARCHAR" property="templateimg"></result>
+    </resultMap>
+    <select id="selectTemplateByUserId" resultMap="BaseResultMap">
+        select
+        *
+        from Template
+        where uid = #{uid}
+    </select>
+    <select id="getAllTemplate" resultMap="BaseResultMap">
+        SELECT
+        *
+        FROM Template
+        WHERE statue = 1
+    </select>
+    <insert id="insertTemplate">
+        INSERT into
+        Template(uid,statue,intime,summary,title,content,templateimg)
+        VALUES (#{uid},#{statue},#{intime},#{summary},#{title},#{content},#{templateimg})
+    </insert>
+    <select id="getTemplateById" resultMap="BaseResultMap">
+        select * from Template
+        WHERE id = #{id}
+    </select>
+</mapper>

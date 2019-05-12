@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    active: dev
+server:
+  port: 8881
+  tomcat:
+    max-http-post-size: 0
+mybatis:
+  typeAliasesPackage: com.fake2edison.entity
+  mapperLocations: classpath:mapper/*.xml
+logging:
+  config: classpath:logback-spring.xml
+
+---
+#开发环境(本地环境)
+spring:
+  profiles: dev
+  application:
+    name: ace-admin
+  datasource:
+    name: test
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/Editor?useUnicode=true&characterEncoding=UTF8
+    username: root
+    password: nakedking0809
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+---
+#生产环境
+spring:
+  profiles: prod
