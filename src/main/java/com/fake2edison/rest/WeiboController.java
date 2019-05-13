@@ -1,9 +1,6 @@
 package com.fake2edison.rest;
 
-import com.fake2edison.entity.SyncHistory;
-import com.fake2edison.entity.Template;
-import com.fake2edison.entity.User;
-import com.fake2edison.entity.Weibo;
+import com.fake2edison.entity.*;
 import com.fake2edison.rpc.service.*;
 import com.fake2edison.weibo4j.Oauth;
 import com.fake2edison.weibo4j.Timeline;
@@ -59,15 +56,21 @@ public class WeiboController {
                 AccessToken as = oauth.getAccessTokenByCode(code);
                 String access_token = as.getAccessToken();
                 String uid = as.getUid();
-                Users um = new Users(access_token);
-                com.fake2edison.weibo4j.model.User userWeibo = um.showUserById(uid);
-                String userNameWeibo = userWeibo.getName();
-                //成功获取到token
-                //此时应该添加token至数据库中
-                count = weiboService.insertWeibo(uid,userNameWeibo,access_token);
-                //当count为1时，添加微博账号成功
-                //添加微博-用户关系表
-                countweibo = weiboUserService.insertWeiboUser(user.getId(),uid);
+                //判断uid是否存在
+                ArrayList<WeiboUser> weiboUserArrayList = weiboUserService.isExitUid(uid);
+                if(weiboUserArrayList.size()>0){
+                    return;
+                }else {
+                    Users um = new Users(access_token);
+                    com.fake2edison.weibo4j.model.User userWeibo = um.showUserById(uid);
+                    String userNameWeibo = userWeibo.getName();
+                    //成功获取到token
+                    //此时应该添加token至数据库中
+                    count = weiboService.insertWeibo(uid,userNameWeibo,access_token);
+                    //当count为1时，添加微博账号成功
+                    //添加微博-用户关系表
+                    countweibo = weiboUserService.insertWeiboUser(user.getId(),uid);
+                }
             }catch (WeiboException e){
                 if(401 == e.getStatusCode()){
 //                    Log.logInfo("Unable to get the access token.");
@@ -121,10 +124,11 @@ public class WeiboController {
                                 //获取weibo的asstoken
                                 Weibo weibo = weiboService.selectWeiboByWidAll(id);
                                 String asstoken = weibo.getAccesstoken();
+                                String url = "http://www.iws365.com";
                                 //发送
                                 Timeline tm = new Timeline(asstoken);
                                 try {
-                                    Status status = tm.updateStatus(template.getContent());
+                                    Status status = tm.updateStatus(template.getContent()+url);
                                     //添加同步记录
                                     int count = syncHistoryService.insertSyncHistory(user.getId(),id,Integer.parseInt(cid),weibo.getName(),template.getTitle());
                                     if(count!=1){

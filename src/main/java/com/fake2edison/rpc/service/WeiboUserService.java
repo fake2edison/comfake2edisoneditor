@@ -1,5 +1,6 @@
 package com.fake2edison.rpc.service;
 
+import com.fake2edison.entity.WeiboUser;
 import com.fake2edison.mapper.WeiboUserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,5 +23,10 @@ public class WeiboUserService {
     public ArrayList<String> getWidByUid(int uid){
         ArrayList<String> widList = weiboUserMapper.getWidByUid(uid);
         return widList;
+    }
+
+    public ArrayList<WeiboUser> isExitUid(String wid){
+        ArrayList<WeiboUser> weiboUserArrayList = weiboUserMapper.isExitUid(wid);
+        return weiboUserArrayList;
     }
 }

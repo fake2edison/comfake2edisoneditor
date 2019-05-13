@@ -19,7 +19,7 @@ spring:
     name: ace-admin
   datasource:
     name: test
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/Editor?useUnicode=true&characterEncoding=UTF8
+    url: jdbc:mysql://${MYSQL_HOST:39.105.130.67}:${MYSQL_PORT:3306}/Editor?useUnicode=true&characterEncoding=UTF8
     username: root
     password: nakedking0809
     # 使用druid数据源

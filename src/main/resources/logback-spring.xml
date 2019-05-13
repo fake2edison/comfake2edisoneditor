@@ -33,10 +33,22 @@
             <charset>UTF8</charset>
         </encoder>
     </appender>
+    <!--&lt;!&ndash; 将日志写入数据库 &ndash;&gt;-->
+    <!--<appender name="DB-CLASSIC-MYSQL-POOL" class="ch.qos.logback.classic.db.DBAppender">-->
+        <!--<connectionSource class="ch.qos.logback.core.db.DataSourceConnectionSource">-->
+            <!--<dataSource class="org.apache.commons.dbcp.BasicDataSource">-->
+                <!--<driverClassName>com.mysql.jdbc.Driver</driverClassName>-->
+                <!--<url>jdbc:mysql://localhost:3306/Editor?characterEncoding=UTF-8</url>-->
+                <!--<username>root</username>-->
+                <!--<password>nakedking0809</password>-->
+            <!--</dataSource>-->
+        <!--</connectionSource>-->
+    <!--</appender>-->
 
-    <root level="DEBUG">
+    <root level="INFO">
         <appender-ref ref="console" />
         <appender-ref ref="file" />
+        <!--<appender-ref ref="DB-CLASSIC-MYSQL-POOL" />-->
     </root>
 
     <logger name="com.sxd.controller"/>

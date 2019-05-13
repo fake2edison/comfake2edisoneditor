@@ -7,7 +7,7 @@
         <result column="wid" jdbcType="VARCHAR" property="wid"></result>
         <result column="contentid" jdbcType="INTEGER" property="contentid"></result>
         <result column="wname" jdbcType="VARCHAR" property="wname"></result>
-        <result column="publishtime" jdbcType="DATE" property="publishname"></result>
+        <result column="publishtime" jdbcType="DATE" property="publishtime"></result>
         <result column="title" jdbcType="VARCHAR" property="title"></result>
     </resultMap>
 
@@ -31,10 +31,23 @@
         FROM SyncHistory
     </select>
 
-    <!--<select id="countSync" resultMap="CountResultMap">-->
-        <!--SELECT count(contentid) AS num,title-->
-        <!--FROM SyncHistory-->
-        <!--GROUP BY contentid-->
-        <!--ORDER BY count(contentid) desc-->
+    <!--<select id="countSync">-->
+        <!--SELECT DISTINCT-->
+         <!--r.title,-->
+         <!--l.contentid,-->
+         <!--l.cc-->
+        <!--FROM-->
+         <!--(-->
+          <!--SELECT-->
+           <!--contentid,-->
+           <!--count(contentid) cc-->
+          <!--FROM-->
+           <!--SyncHistory-->
+          <!--GROUP BY-->
+           <!--contentid-->
+            <!--order by-->
+                <!--cc-->
+         <!--) l-->
+        <!--LEFT JOIN SyncHistory r ON l.contentid = r.contentid-->
     <!--</select>-->
 </mapper>

@@ -1,5 +1,6 @@
 package com.fake2edison.mapper;
 
+import com.fake2edison.entity.WeiboUser;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.ArrayList;
@@ -12,4 +13,6 @@ public interface WeiboUserMapper {
     public int insertWeiboUser(@Param("uid") int uid, @Param("wid") String wid);
 
     public ArrayList<String> getWidByUid(@Param("uid") int uid);
+
+    public ArrayList<WeiboUser> isExitUid(@Param("wid")String wid);
 }

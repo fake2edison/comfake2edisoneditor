@@ -951,7 +951,7 @@ public class Timeline extends Weibo {
 	 */
 	public Status updateStatus(String status) throws WeiboException {
 		return new Status(client.post(WeiboConfig.getValue("baseURL")
-				+ "statuses/update.json",
+				+ "statuses/share.json",
 				new PostParameter[] { new PostParameter("status", status) },
 				access_token));
 	}

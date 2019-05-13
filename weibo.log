@@ -364,3 +364,10 @@
 0    INFO  [2019-05-12 14:26:06]  {dataSource-1} inited
 613396 INFO  [2019-05-12 14:36:20]  {dataSource-1} closed
 0    INFO  [2019-05-12 14:37:14]  {dataSource-1} inited
+3030240 INFO  [2019-05-12 15:27:44]  {dataSource-1} closed
+0    INFO  [2019-05-13 08:50:41]  {dataSource-1} inited
+1411164 INFO  [2019-05-13 09:14:12]  {dataSource-1} closed
+2    INFO  [2019-05-13 09:16:46]  {dataSource-1} inited
+300656 INFO  [2019-05-13 09:21:47]  {dataSource-1} closed
+0    INFO  [2019-05-13 09:24:44]  {dataSource-1} inited
+2515871 INFO  [2019-05-13 10:06:40]  {dataSource-1} closed

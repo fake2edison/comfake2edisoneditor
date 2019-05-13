@@ -16,4 +16,9 @@
         FROM WeiboUser
         WHERE uid = #{uid}
     </select>
+    <select id="isExitUid" resultMap="BaseResultMap">
+        SELECT *
+        FROM WeiboUser
+        WHERE wid = #{wid}
+    </select>
 </mapper>

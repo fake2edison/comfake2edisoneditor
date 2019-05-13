@@ -25,6 +25,7 @@
         <if test="code != 'all'">
             WHERE type = #{code}
         </if>
+        ORDER BY height DESC
         limit #{item}
     </select>
 
@@ -37,6 +38,7 @@
         <if test="code != 'all'">
          and Common.type = #{code}
         </if>
+        ORDER BY height DESC
         limit #{item}
     </select>
 
@@ -52,9 +54,11 @@
         WHERE menu_uuid = #{menu_uuid}
     </update>
 
-    <select id="selectCommonByPage" resultMap="BaseResultMap">
+    <select id="selectCommonByPage" parameterType="INTEGER" resultMap="BaseResultMap">
         SELECT *
         FROM Common
+        ORDER BY height
+        DESC
         limit #{pre_page},#{last_page}
     </select>
 
