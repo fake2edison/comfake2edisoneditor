@@ -22,6 +22,7 @@
         *
         FROM Template
         WHERE statue = 1
+        limit #{page},10
     </select>
     <insert id="insertTemplate">
         INSERT into
@@ -31,5 +32,6 @@
     <select id="getTemplateById" resultMap="BaseResultMap">
         select * from Template
         WHERE id = #{id}
+        limit #{page},10
     </select>
 </mapper>

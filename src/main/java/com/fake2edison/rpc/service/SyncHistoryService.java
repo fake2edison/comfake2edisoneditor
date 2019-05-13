@@ -1,6 +1,7 @@
 package com.fake2edison.rpc.service;
 
 import com.fake2edison.entity.SyncHistory;
+import com.fake2edison.entity.SyncMap;
 import com.fake2edison.mapper.SyncHistoryMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,5 +30,10 @@ public class SyncHistoryService {
     public ArrayList<SyncHistory> selectSyncRecord(){
         ArrayList<SyncHistory> syncHistoryArrayList = syncHistoryMapper.selectSyncHistory();
         return syncHistoryArrayList;
+    }
+
+    public ArrayList<SyncMap> countSync(){
+        ArrayList<SyncMap> syncMapArrayList = syncHistoryMapper.countSync();
+        return syncMapArrayList;
     }
 }

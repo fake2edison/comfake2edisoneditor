@@ -1,6 +1,7 @@
 package com.fake2edison.mapper;
 
 import com.fake2edison.entity.SyncHistory;
+import com.fake2edison.entity.SyncMap;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.ArrayList;
@@ -16,4 +17,6 @@ public interface SyncHistoryMapper {
     public int insertSyncHistory(@Param("uid")int uid, @Param("wid") String wid,@Param("contentid") int contentid,@Param("wname") String wname, @Param("title") String title);
 
     public ArrayList<SyncHistory> selectSyncHistory();
+
+    public ArrayList<SyncMap> countSync();
 }

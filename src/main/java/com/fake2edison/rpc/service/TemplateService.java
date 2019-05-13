@@ -21,14 +21,14 @@ public class TemplateService {
         int result = templateMapper.insertTemplate(uid,statue,intime,summary,title,content,templateimg);
         return result;
     }
-    public List<Template> getTemplateByUser(int id){
+    public List<Template> getTemplateByUser(int id,int page){
         List<Template> templateList = new ArrayList<Template>();
-        templateList = templateMapper.selectTemplateByUserId(id);
+        templateList = templateMapper.selectTemplateByUserId(id,page);
         return templateList;
     }
-    public List<Template> getAllTemplate(){
+    public List<Template> getAllTemplate(int page){
         List<Template> templateList = new ArrayList<Template>();
-        templateList = templateMapper.getAllTemplate();
+        templateList = templateMapper.getAllTemplate(page);
         return templateList;
     }
     public Template getTemplateById(int id){

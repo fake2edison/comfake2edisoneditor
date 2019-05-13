@@ -6,6 +6,7 @@ import com.fake2edison.rpc.service.TemplateService;
 import com.fake2edison.util.UuidUtil;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -61,12 +62,12 @@ public class TemplateController {
      */
     @RequestMapping(value = "/getTemplate",method = RequestMethod.GET)
     @ResponseBody
-    public List<Template> getTemplateByUserId(HttpServletRequest request){
+    public List<Template> getTemplateByUserId(HttpServletRequest request,@RequestParam("page") int page){
         HttpSession session = request.getSession();
         User user = (User)session.getAttribute("USER");
         int id = user.getId();
         List<Template> templateList = new ArrayList<Template>();
-        templateList = templateService.getTemplateByUser(id);
+        templateList = templateService.getTemplateByUser(id,page);
         return templateList;
     }
 
@@ -76,9 +77,9 @@ public class TemplateController {
      */
     @RequestMapping(value = "/getAllTemplate",method = RequestMethod.GET)
     @ResponseBody
-    public List<Template> getAllTemplate(){
+    public List<Template> getAllTemplate(@Param("page") int page){
         List<Template> templateList = new ArrayList<Template>();
-        templateList = templateService.getAllTemplate();
+        templateList = templateService.getAllTemplate(page);
         return templateList;
     }
 
@@ -94,7 +95,8 @@ public class TemplateController {
         Gson gson = new Gson();
         if(!file.isEmpty()){
             try{
-                String UPLOAD_FILE_PATH = "//Users/fake2edison/Desktop/ieditor/static/img/";
+//                String UPLOAD_FILE_PATH = "//Users/fake2edison/Desktop/ieditor/static/img/";
+                String UPLOAD_FILE_PATH = "//usr/local/src/vue/dist/static/img";
                 Calendar calendar = Calendar.getInstance();
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                 String fileName = sdf.format(calendar.getTime()) + UuidUtil.getUUID() + file.getOriginalFilename();

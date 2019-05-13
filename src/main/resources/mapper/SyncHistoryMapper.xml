@@ -10,6 +10,11 @@
         <result column="publishtime" jdbcType="DATE" property="publishtime"></result>
         <result column="title" jdbcType="VARCHAR" property="title"></result>
     </resultMap>
+    <resultMap id="CountMap" type="com.fake2edison.entity.SyncMap">
+        <result column="title" jdbcType="VARCHAR" property="title"></result>
+        <result column="contentid" jdbcType="INTEGER" property="contentid"></result>
+        <result column="cc" jdbcType="INTEGER" property="cc"></result>
+    </resultMap>
 
     <select id="selectSyncHistoryByUserId" resultMap="BaseResultMap">
         SELECT
@@ -31,23 +36,24 @@
         FROM SyncHistory
     </select>
 
-    <!--<select id="countSync">-->
-        <!--SELECT DISTINCT-->
-         <!--r.title,-->
-         <!--l.contentid,-->
-         <!--l.cc-->
-        <!--FROM-->
-         <!--(-->
-          <!--SELECT-->
-           <!--contentid,-->
-           <!--count(contentid) cc-->
-          <!--FROM-->
-           <!--SyncHistory-->
-          <!--GROUP BY-->
-           <!--contentid-->
-            <!--order by-->
-                <!--cc-->
-         <!--) l-->
-        <!--LEFT JOIN SyncHistory r ON l.contentid = r.contentid-->
-    <!--</select>-->
+    <select id="countSync" resultMap="CountMap">
+        SELECT DISTINCT
+         r.title,
+         l.contentid,
+         l.cc
+        FROM
+         (
+          SELECT
+           contentid,
+           count(contentid) cc
+          FROM
+           SyncHistory
+          GROUP BY
+           contentid
+            order by
+                cc
+         ) l
+        LEFT JOIN SyncHistory r ON l.contentid = r.contentid
+        limit 0,100
+    </select>
 </mapper>

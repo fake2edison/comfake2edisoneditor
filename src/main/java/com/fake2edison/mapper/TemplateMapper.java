@@ -11,8 +11,8 @@ import java.util.List;
  */
 public interface TemplateMapper {
     public int insertTemplate(@Param("uid") int uid,@Param("statue") int statue,@Param("intime") Date intime,@Param("summary") String summary,@Param("title") String title,@Param("content") String content,@Param("templateimg") String templateimg);
-    public List selectTemplateByUserId(@Param("uid")int id);
-    public List getAllTemplate();
+    public List selectTemplateByUserId(@Param("uid")int id,@Param("page") int page);
+    public List getAllTemplate(@Param("page") int page);
     public Template getTemplateById(@Param("id")int id);
 }
 

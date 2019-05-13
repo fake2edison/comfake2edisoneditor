@@ -134,11 +134,13 @@ public class WeiboController {
                                     if(count!=1){
                                         return "插入数据库失败";
                                     }
+                                    Thread.sleep(2000);
                                 } catch (WeiboException e) {
                                     e.printStackTrace();
                                     return "发送微博失败";
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
                                 }
-
                             }
                         }else {
                             return "模版ID为空";
@@ -179,6 +181,18 @@ public class WeiboController {
             syncHistoryArrayList = syncHistoryService.selectSyncRecord();
         }
         return syncHistoryArrayList;
+    }
+
+    @RequestMapping(value = "/selectSyncCount",method = RequestMethod.GET)
+    @ResponseBody
+    public ArrayList<SyncMap> selectSyncCount(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        User user = (User)session.getAttribute("USER");
+        ArrayList<SyncMap> syncMapArrayList = new ArrayList<SyncMap>();
+        if(user != null && user.getIs_admin() == 1){
+            syncMapArrayList = syncHistoryService.countSync();
+        }
+        return syncMapArrayList;
     }
 
 }
