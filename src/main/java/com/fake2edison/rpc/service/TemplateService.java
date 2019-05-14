@@ -35,5 +35,14 @@ public class TemplateService {
         Template template = templateMapper.getTemplateById(id);
         return template;
     }
+    public ArrayList<Template> getFavoriteTemplate(int uid, int item){
+        ArrayList<Template> templateArrayList = new ArrayList<Template>();
+        templateArrayList = templateMapper.getFavoriteTemplate(uid,item);
+        return templateArrayList;
+    }
+    public int delTemplateById(int uid,int id){
+        int count = templateMapper.delTemplateById(uid,id);
+        return count;
+    }
 
 }

@@ -21,13 +21,18 @@ public class FavoriteService {
         return favoriteList;
     }
 
-    public int addFavorites(int uid, String cid){
-        int result = favoritesMapper.addFavoritesByUser(uid,cid);
+    public int addFavorites(int uid, String cid,int type){
+        int result = favoritesMapper.addFavoritesByUser(uid,cid,type);
         return result;
     }
 
     public int delFavorites(int uid, String cid){
         int result = favoritesMapper.delFavoritesByUser(uid,cid);
+        return result;
+    }
+
+    public int delTemplateById(String cid){
+        int result = favoritesMapper.delTemplateById(cid);
         return result;
     }
 

@@ -2,6 +2,7 @@ package com.fake2edison.rest;
 
 import com.fake2edison.entity.Template;
 import com.fake2edison.entity.User;
+import com.fake2edison.rpc.service.FavoriteService;
 import com.fake2edison.rpc.service.TemplateService;
 import com.fake2edison.util.UuidUtil;
 import com.google.gson.Gson;
@@ -33,6 +34,8 @@ import java.util.*;
 public class TemplateController {
     @Autowired
     private TemplateService templateService;
+    @Autowired
+    private FavoriteService favoriteService;
 
     /**
      * 插入模版类型
@@ -121,6 +124,37 @@ public class TemplateController {
             }
         }else {
             return null;
+        }
+    }
+
+    @RequestMapping(value = "/getFavoriteTemplate",method = RequestMethod.GET)
+    @ResponseBody
+    public ArrayList<Template> getFavoriteTemplateByUser(HttpServletRequest request,@RequestParam("item")int item){
+        HttpSession session = request.getSession();
+        User user = (User)session.getAttribute("USER");
+        ArrayList<Template> templateArrayList = new ArrayList<Template>();
+        if(user != null){
+            templateArrayList = templateService.getFavoriteTemplate(user.getId(),item);
+        }
+        return templateArrayList;
+    }
+
+    @RequestMapping(value = "/delTemplate",method = RequestMethod.POST)
+    @ResponseBody
+    public String delTemplate(HttpServletRequest request,@RequestParam("id") int id){
+        HttpSession session = request.getSession();
+        User user = (User)session.getAttribute("USER");
+        if(user != null){
+            int count = templateService.delTemplateById(user.getId(),id);
+            if(count == 1){
+                //说明删除成功
+                //删除收藏表中对应的ID
+                count = favoriteService.delTemplateById(id+"");
+                return "删除成功";
+            }else
+                return "删除失败";
+        }else {
+            return "用户登陆失效";
         }
     }
 

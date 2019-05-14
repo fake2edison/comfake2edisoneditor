@@ -9,6 +9,7 @@ import java.util.ArrayList;
  */
 public interface FavoritesMapper {
     public ArrayList<String> getFavoritesByUser(@Param("uid") Integer uid);
-    public Integer addFavoritesByUser(@Param("uid") Integer uid, @Param("cid") String cid);
+    public Integer addFavoritesByUser(@Param("uid") Integer uid, @Param("cid") String cid,@Param("type") int type);
     public Integer delFavoritesByUser(@Param("uid") Integer uid, @Param("cid") String cid);
+    public Integer delTemplateById(@Param("id") String cid);
 }

@@ -3,6 +3,7 @@ package com.fake2edison.mapper;
 import com.fake2edison.entity.Template;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -14,10 +15,6 @@ public interface TemplateMapper {
     public List selectTemplateByUserId(@Param("uid")int id,@Param("page") int page);
     public List getAllTemplate(@Param("page") int page);
     public Template getTemplateById(@Param("id")int id);
+    public ArrayList<Template> getFavoriteTemplate(@Param("uid") int uid,@Param("item") int item);
+    public int delTemplateById(@Param("uid")int uid,@Param("id") int id);
 }
-
-//public interface UserMapper {
-//    public User selectUserByLogin(@Param("account") String account,@Param("password") String password);
-//    public int insertUserInRegiest(@Param("account") String account,@Param("telephone") String telephone,@Param("password") String password);
-//    public User selectUserByTelephone(@Param("telephone") String telephone);
-//}

@@ -5,6 +5,7 @@
         <id column="id" jdbcType="INTEGER" property="id"></id>
         <result column="uid" jdbcType="INTEGER" property="uid"></result>
         <result column="cid" jdbcType="VARCHAR" property="cid"></result>
+        <result column="type" jdbcType="INTEGER" property="type"></result>
     </resultMap>
 
     <select id="getFavoritesByUser" resultType="STRING">
@@ -17,13 +18,19 @@
 
     <insert id="addFavoritesByUser">
         INSERT INTO
-        Favorites(uid,cid)
-        VALUES (#{uid},#{cid})
+        Favorites(uid,cid,type)
+        VALUES (#{uid},#{cid},#{type})
     </insert>
 
     <delete id="delFavoritesByUser">
         DELETE FROM
         Favorites
         WHERE uid = #{uid} AND cid = #{cid}
+    </delete>
+
+    <delete id="delTemplateById">
+        DELETE FROM
+        Favorites
+        WHERE cid = #{id} AND type = 1
     </delete>
 </mapper>

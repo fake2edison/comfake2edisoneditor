@@ -22,8 +22,20 @@
         *
         FROM Template
         WHERE statue = 1
-        limit #{page},10
+        limit 0,#{page}
     </select>
+    <select id="getFavoriteTemplate" resultMap="BaseResultMap">
+        SELECT
+        *
+        from Template JOIN Favorites
+        ON Template.id = Favorites.cid
+        WHERE Favorites.uid = #{uid} and Favorites.type = 1
+        limit #{item}
+    </select>
+    <delete id="delTemplateById">
+        DELETE FROM Template
+        WHERE id = #{id} AND uid = #{uid}
+    </delete>
     <insert id="insertTemplate">
         INSERT into
         Template(uid,statue,intime,summary,title,content,templateimg)
@@ -32,6 +44,6 @@
     <select id="getTemplateById" resultMap="BaseResultMap">
         select * from Template
         WHERE id = #{id}
-        limit #{page},10
+        limit 0,#{page}
     </select>
 </mapper>

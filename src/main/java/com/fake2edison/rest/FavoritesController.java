@@ -41,13 +41,13 @@ public class FavoritesController {
 
     @RequestMapping(value = "/addFavorites",method = RequestMethod.POST)
     @ResponseBody
-    public int addFavorites(HttpServletRequest request,@Param("uuid") String uuid){
+    public int addFavorites(HttpServletRequest request,@Param("uuid") String uuid,@Param("type") int type){
         HttpSession session = request.getSession();
         User user = (User)session.getAttribute("USER");
         int result = 0;
         int count = 0;
         if(user != null){
-            result = favoriteService.addFavorites(user.getId(),uuid);
+            result = favoriteService.addFavorites(user.getId(),uuid,type);
             count = commonService.addFavoritesByUUID(uuid);
 
         }
