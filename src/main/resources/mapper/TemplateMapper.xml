@@ -44,6 +44,15 @@
     <select id="getTemplateById" resultMap="BaseResultMap">
         select * from Template
         WHERE id = #{id}
-        limit 0,#{page}
+    </select>
+    <select id="getTemplateByUserAndPage" resultMap="BaseResultMap">
+        select * from Template
+        where uid = #{uid}
+        limit #{page},8
+    </select>
+    <select id="getTemplateCountByUser" resultType="INTEGER">
+        select count(id)
+        from Template
+        WHERE uid = #{uid}
     </select>
 </mapper>

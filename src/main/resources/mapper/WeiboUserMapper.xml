@@ -21,4 +21,9 @@
         FROM WeiboUser
         WHERE wid = #{wid}
     </select>
+    <delete id="delWeiboUserByUid">
+        DELETE FROM
+        WeiboUser
+        WHERE wid = #{wid}
+    </delete>
 </mapper>

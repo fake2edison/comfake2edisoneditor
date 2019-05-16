@@ -29,4 +29,8 @@ public class WeiboUserService {
         ArrayList<WeiboUser> weiboUserArrayList = weiboUserMapper.isExitUid(wid);
         return weiboUserArrayList;
     }
+    public int delWeiboUserByUid(String uid){
+        int count = weiboUserMapper.delWeiboUserByUid(uid);
+        return count;
+    }
 }

@@ -10,4 +10,5 @@ public interface WeiboMapper {
     public int insertWeibo(@Param("uid") String uid, @Param("name") String name, @Param("accesstoken") String accesstoken);
     public Weibo selectWeiboByWid(@Param("wid")String wid);
     public Weibo selectWeiboByWidAll(@Param("wid") String wid);
+    public int delWeiboByUid(@Param("uid") String uid);
 }

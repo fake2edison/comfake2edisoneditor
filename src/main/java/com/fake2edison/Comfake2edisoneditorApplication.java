@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.fake2edison.mapper")
-public class Comfake2edisoneditorApplication {
+public class Comfake2edisoneditorApplication{
 
 	public static void main(String[] args) {
 		SpringApplication.run(Comfake2edisoneditorApplication.class, args);

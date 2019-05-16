@@ -15,4 +15,6 @@ public interface WeiboUserMapper {
     public ArrayList<String> getWidByUid(@Param("uid") int uid);
 
     public ArrayList<WeiboUser> isExitUid(@Param("wid")String wid);
+
+    public int delWeiboUserByUid(@Param("wid") String wid);
 }

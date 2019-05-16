@@ -74,6 +74,27 @@ public class TemplateController {
         return templateList;
     }
 
+    @RequestMapping(value = "/getTemplateByPage",method = RequestMethod.GET)
+    @ResponseBody
+    public List<Template> getTemplateByUserIdAndPage(HttpServletRequest request,@RequestParam("page") int page){
+        HttpSession session = request.getSession();
+        User user = (User)session.getAttribute("USER");
+        int id = user.getId();
+        List<Template> templateList = new ArrayList<Template>();
+        templateList = templateService.getTemplateByUserAndPage(id,page);
+        return templateList;
+    }
+
+    @RequestMapping(value = "/getTemplateCount",method = RequestMethod.GET)
+    @ResponseBody
+    public int getTemplateCountByUserId(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        User user = (User)session.getAttribute("USER");
+        int id = user.getId();
+        int count = templateService.getTemplateCountByUser(id);
+        return count;
+    }
+
     /**
      * 获取所有的模版
      * @return

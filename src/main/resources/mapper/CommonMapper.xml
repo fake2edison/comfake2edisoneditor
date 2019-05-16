@@ -3,18 +3,12 @@
 <mapper namespace="com.fake2edison.mapper.CommonMapper" >
     <resultMap id="BaseResultMap" type="com.fake2edison.entity.Common">
         <result column="menu_uuid" jdbcType="VARCHAR" property="menu_uuid"></result>
-        <result column="update_time" jdbcType="DATE" property="update_time"></result>
         <result column="tag_name" jdbcType="VARCHAR" property="tag_name"></result>
-        <result column="store_num" jdbcType="INTEGER" property="store_num"></result>
-        <result column="status" jdbcType="INTEGER" property="status"></result>
         <result column="source_editor" jdbcType="VARCHAR" property="source_editor"></result>
         <result column="remark" jdbcType="VARCHAR" property="remark"></result>
-        <result column="pass" jdbcType="INTEGER" property="pass"></result>
         <result column="name" jdbcType="VARCHAR" property="name"></result>
         <result column="insert_time" jdbcType="DATE" property="insert_time"></result>
-        <result column="img_url" jdbcType="VARCHAR" property="img_url"></result>
         <result column="height" jdbcType="INTEGER" property="height"></result>
-        <result column="flag" jdbcType="INTEGER" property="flag"></result>
         <result column="content" jdbcType="VARCHAR" property="content"></result>
         <result column="type" jdbcType="VARCHAR" property="type"></result>
     </resultMap>
@@ -72,4 +66,9 @@
         select count(menu_uuid)
         FROM Common
     </select>
+
+    <insert id="addStyle">
+      INSERT Common(menu_uuid,tag_name,source_editor,remark,name,content,tyle)
+      VALUE (#{menu_uuid},#{tag_name},#{source_editor},#{remark},#{name},#{content},#{style})
+    </insert>
 </mapper>

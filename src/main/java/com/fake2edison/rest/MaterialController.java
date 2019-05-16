@@ -3,6 +3,7 @@ package com.fake2edison.rest;
 import com.fake2edison.entity.Common;
 import com.fake2edison.entity.User;
 import com.fake2edison.rpc.service.CommonService;
+import com.fake2edison.util.UuidUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -68,5 +69,25 @@ public class MaterialController {
     public int countStyle(){
         int count = commonService.countStyle();
         return count;
+    }
+
+    @RequestMapping(value = "/addStyle",method = RequestMethod.POST)
+    @ResponseBody
+    public String addStyle(HttpServletRequest request,@RequestParam("tag_name") String tag_name, @RequestParam("remark")String remark,@RequestParam("name") String name,@RequestParam("content")String content,@RequestParam("type")String type){
+        HttpSession session = request.getSession();
+        User user = (User)session.getAttribute("USER");
+        if(user != null && user.getIs_admin()==1){
+            String uuid = UuidUtil.getUUID();
+//            对content进行格式化
+            String contentFormat = "<section class=\"RankEditor\">"+content+"</section>";
+            int count = commonService.addStyle(uuid,tag_name,user.getName(),remark,name,contentFormat,type);
+            if(count == 1){
+                return "添加成功";
+            }else {
+                return "添加失败";
+            }
+        }else {
+            return "用户权限不符";
+        }
     }
 }

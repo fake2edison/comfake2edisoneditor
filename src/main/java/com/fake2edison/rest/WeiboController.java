@@ -112,6 +112,7 @@ public class WeiboController {
         User user = (User)session.getAttribute("USER");
         String[] wid = wids.split(";");
         String[] contentid = contentids.split(";");
+        String result = "";//用于记录每个微博的异常信息
         if(user != null){
             //根据contentid获取到文章的信息
             if(contentid.length>0){
@@ -134,10 +135,16 @@ public class WeiboController {
                                     if(count!=1){
                                         return "插入数据库失败";
                                     }
-                                    Thread.sleep(2000);
+                                    Thread.sleep(5000);
                                 } catch (WeiboException e) {
+                                    if(e.getError().indexOf("Token")>-1){
+                                        //说明token失效
+                                        //删除数据库中的weibo
+                                        result = result + weibo.getName() + ":"+e.getError() + "\n";
+                                        int count = weiboService.delWeiboByUid(weibo.getUid());
+                                        int delCount = weiboUserService.delWeiboUserByUid(weibo.getUid());
+                                    }
                                     e.printStackTrace();
-                                    return "发送微博失败";
                                 } catch (InterruptedException e) {
                                     e.printStackTrace();
                                 }
@@ -149,7 +156,10 @@ public class WeiboController {
                         return "模版ID获取失败";
                     }
                 }
-                return "发送成功";
+                if(result.length()>0){
+                    return result;
+                }else
+                    return "发送成功";
             }else {
                 return "文章ID获取失败";
             }

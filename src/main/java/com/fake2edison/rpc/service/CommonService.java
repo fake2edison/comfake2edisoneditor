@@ -56,4 +56,9 @@ public class CommonService {
         int count = commonMapper.countStyle();
         return count;
     }
+
+    public int addStyle(String menu_uuid, String tag_name, String source_editor,String remark,String name,String content, String type){
+        int count = commonMapper.addStyle(menu_uuid,tag_name,source_editor,remark,name,content,type);
+        return count;
+    }
 }

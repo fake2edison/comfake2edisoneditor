@@ -30,4 +30,8 @@ public class WeiboService {
         Weibo weibo = weiboMapper.selectWeiboByWidAll(wid);
         return weibo;
     }
+    public int delWeiboByUid(String uid){
+        int count = delWeiboByUid(uid);
+        return count;
+    }
 }

@@ -16,4 +16,5 @@ public interface CommonMapper {
     public ArrayList<Common> selectCommonByPage(@Param("pre_page") int pre_page,@Param("last_page") int last_page);
     public int addStyleHot(@Param("menu_uuid") String menu_uuid);
     public int countStyle();
+    public int addStyle(@Param("menu_uuid") String menu_uuid,@Param("tag_name") String tag_name,@Param("source_editor") String source_editor,@Param("remark") String remark, @Param("name")String name,@Param("content")String content,@Param("type")String type);
 }

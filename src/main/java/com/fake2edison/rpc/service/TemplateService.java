@@ -44,5 +44,14 @@ public class TemplateService {
         int count = templateMapper.delTemplateById(uid,id);
         return count;
     }
+    public ArrayList<Template> getTemplateByUserAndPage(int uid, int page){
+        ArrayList<Template> templateArrayList = new ArrayList<Template>();
+        templateArrayList = templateMapper.getTemplateByUserAndPage(uid,page*8);
+        return templateArrayList;
+    }
+    public int getTemplateCountByUser(int uid){
+        int count = templateMapper.getTemplateCountByUser(uid);
+        return count;
+    }
 
 }
