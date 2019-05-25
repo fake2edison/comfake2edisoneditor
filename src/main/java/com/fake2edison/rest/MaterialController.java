@@ -3,6 +3,7 @@ package com.fake2edison.rest;
 import com.fake2edison.entity.Common;
 import com.fake2edison.entity.User;
 import com.fake2edison.rpc.service.CommonService;
+import com.fake2edison.rpc.service.LogService;
 import com.fake2edison.util.UuidUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,6 +26,8 @@ import java.util.Map;
 public class MaterialController {
     @Autowired
     private CommonService commonService;
+    @Autowired
+    private LogService logService;
 
     @RequestMapping(value = "/getMateri",method = RequestMethod.GET)
     @ResponseBody
@@ -55,12 +58,21 @@ public class MaterialController {
 
     @RequestMapping(value = "/addHot", method = RequestMethod.POST)
     @ResponseBody
-    public String addHot(@RequestParam("menu_uuid") String uuid){
-        int count = commonService.addStyleHot(uuid);
-        if(count == 1){
-            return "添加成功";
+    public String addHot(HttpServletRequest request,@RequestParam("menu_uuid") String uuid){
+        HttpSession session = request.getSession();
+        User user = (User)session.getAttribute("USER");
+        if(user != null && user.getIs_admin() == 1){
+            int count = commonService.addStyleHot(uuid);
+            String opeartion = "添加样式"+uuid+"热度";
+            if(count == 1){
+                logService.insertLog(user.getId(),opeartion,"成功");
+                return "添加成功";
+            }else {
+                logService.insertLog(user.getId(),opeartion,"失败");
+                return "添加失败";
+            }
         }else {
-            return "添加失败";
+            return "用户权限不符";
         }
     }
 
@@ -90,4 +102,26 @@ public class MaterialController {
             return "用户权限不符";
         }
     }
+
+    @RequestMapping(value = "/delStyle",method = RequestMethod.POST)
+    @ResponseBody
+    public String delStyle(HttpServletRequest request,@RequestParam("menu_uuid")String menu_uuid){
+        HttpSession session = request.getSession();
+        User user = (User)session.getAttribute("USER");
+        if(user != null && user.getIs_admin()==1){
+//            对content进行格式化
+            int count = commonService.delStyle(menu_uuid);
+            String opeartion = "删除"+menu_uuid+"素材";
+            if(count == 1){
+                logService.insertLog(user.getId(),opeartion,"成功");
+                return "删除成功";
+            }else {
+                logService.insertLog(user.getId(),opeartion,"失败");
+                return "删除失败";
+            }
+        }else {
+            return "用户权限不符";
+        }
+    }
+
 }

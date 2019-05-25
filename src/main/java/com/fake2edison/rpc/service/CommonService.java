@@ -61,4 +61,9 @@ public class CommonService {
         int count = commonMapper.addStyle(menu_uuid,tag_name,source_editor,remark,name,content,type);
         return count;
     }
+
+    public int delStyle(String menu_uuid){
+        int count = commonMapper.delStyle(menu_uuid);
+        return count;
+    }
 }

@@ -1,471 +1,520 @@
-0    INFO  [2019-05-10 15:06:39]  code: 18af454b9cd18d91e1daa85ba280083f
-6    DEBUG [2019-05-10 15:06:39]  Request:
-7    DEBUG [2019-05-10 15:06:39]  POSThttps://api.weibo.com/oauth2/access_token
-5557 DEBUG [2019-05-10 15:06:45]  Response:
-5557 DEBUG [2019-05-10 15:06:45]  https StatusCode:200
-5557 DEBUG [2019-05-10 15:06:45]  Server:nginx/1.6.1
-5558 DEBUG [2019-05-10 15:06:45]  Date:Fri, 10 May 2019 07:06:45 GMT
-5558 DEBUG [2019-05-10 15:06:45]  Content-Type:application/json;charset=UTF-8
-5558 DEBUG [2019-05-10 15:06:45]  Content-Length:137
-5558 DEBUG [2019-05-10 15:06:45]  Connection:keep-alive
-5559 DEBUG [2019-05-10 15:06:45]  Pragma:No-cache
-5560 DEBUG [2019-05-10 15:06:45]  Cache-Control:no-cache
-5560 DEBUG [2019-05-10 15:06:45]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
-5567 DEBUG [2019-05-10 15:06:45]  {"access_token":"2.00OFC3IDt2EH9D636de34defypQvtB","remind_in":"157679999","expires_in":157679999,"uid":"2871860412","isRealName":"true"}
+525  ERROR [2019-05-22 10:33:04]  create connection error, url: jdbc:mysql://39.105.130.67:3306/Editor?useUnicode=true&characterEncoding=UTF8, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
-0    INFO  [2019-05-10 15:21:49]  code: 8af8b2cee5277fc7f3471ce7d82b4ffa
-10   DEBUG [2019-05-10 15:21:49]  Request:
-10   DEBUG [2019-05-10 15:21:49]  POSThttps://api.weibo.com/oauth2/access_token
-5662 DEBUG [2019-05-10 15:21:55]  Response:
-5662 DEBUG [2019-05-10 15:21:55]  https StatusCode:200
-5663 DEBUG [2019-05-10 15:21:55]  Server:nginx/1.6.1
-5663 DEBUG [2019-05-10 15:21:55]  Date:Fri, 10 May 2019 07:21:55 GMT
-5663 DEBUG [2019-05-10 15:21:55]  Content-Type:application/json;charset=UTF-8
-5664 DEBUG [2019-05-10 15:21:55]  Content-Length:137
-5664 DEBUG [2019-05-10 15:21:55]  Connection:keep-alive
-5664 DEBUG [2019-05-10 15:21:55]  Pragma:No-cache
-5664 DEBUG [2019-05-10 15:21:55]  Cache-Control:no-cache
-5665 DEBUG [2019-05-10 15:21:55]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
-5672 DEBUG [2019-05-10 15:21:55]  {"access_token":"2.00OFC3IDt2EH9D636de34defypQvtB","remind_in":"157679999","expires_in":157679999,"uid":"2871860412","isRealName":"true"}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2178)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
-0    INFO  [2019-05-10 15:50:49]  code: 5cec3786799ac778744ebc3832125d66
-10   DEBUG [2019-05-10 15:50:49]  Request:
-10   DEBUG [2019-05-10 15:50:49]  POSThttps://api.weibo.com/oauth2/access_token
-6199 DEBUG [2019-05-10 15:50:55]  Response:
-6200 DEBUG [2019-05-10 15:50:55]  https StatusCode:200
-6200 DEBUG [2019-05-10 15:50:55]  Server:nginx/1.6.1
-6200 DEBUG [2019-05-10 15:50:55]  Date:Fri, 10 May 2019 07:50:55 GMT
-6201 DEBUG [2019-05-10 15:50:55]  Content-Type:application/json;charset=UTF-8
-6201 DEBUG [2019-05-10 15:50:55]  Content-Length:137
-6201 DEBUG [2019-05-10 15:50:55]  Connection:keep-alive
-6202 DEBUG [2019-05-10 15:50:55]  Pragma:No-cache
-6202 DEBUG [2019-05-10 15:50:55]  Cache-Control:no-cache
-6202 DEBUG [2019-05-10 15:50:55]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
-6210 DEBUG [2019-05-10 15:50:55]  {"access_token":"2.00OFC3IDt2EH9D636de34defypQvtB","remind_in":"157679999","expires_in":157679999,"uid":"2871860412","isRealName":"true"}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor38.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:152)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 6 more
+Caused by: java.net.SocketException: Network is unreachable (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 9 more
+528  ERROR [2019-05-22 10:33:04]  create connection error, url: jdbc:mysql://39.105.130.67:3306/Editor?useUnicode=true&characterEncoding=UTF8, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
-0    INFO  [2019-05-10 16:18:59]  {dataSource-1} inited
-50925 INFO  [2019-05-10 16:19:50]  {dataSource-1} closed
-0    INFO  [2019-05-10 16:20:49]  {dataSource-1} inited
-71267 INFO  [2019-05-10 16:22:00]  {dataSource-1} closed
-0    INFO  [2019-05-10 16:23:10]  {dataSource-1} inited
-1110726 INFO  [2019-05-10 16:41:40]  {dataSource-1} closed
-0    INFO  [2019-05-11 13:00:48]  {dataSource-1} inited
-126551 INFO  [2019-05-11 13:02:54]  {dataSource-1} closed
-0    INFO  [2019-05-11 13:03:53]  {dataSource-1} inited
-12693 DEBUG [2019-05-11 13:04:06]  Request:
-12694 DEBUG [2019-05-11 13:04:06]  POSThttps://api.weibo.com/oauth2/access_token
-18900 DEBUG [2019-05-11 13:04:12]  Response:
-18901 DEBUG [2019-05-11 13:04:12]  https StatusCode:200
-18901 DEBUG [2019-05-11 13:04:12]  Server:nginx/1.6.1
-18901 DEBUG [2019-05-11 13:04:12]  Date:Sat, 11 May 2019 05:04:11 GMT
-18901 DEBUG [2019-05-11 13:04:12]  Content-Type:application/json;charset=UTF-8
-18901 DEBUG [2019-05-11 13:04:12]  Content-Length:137
-18901 DEBUG [2019-05-11 13:04:12]  Connection:keep-alive
-18901 DEBUG [2019-05-11 13:04:12]  Pragma:No-cache
-18901 DEBUG [2019-05-11 13:04:12]  Cache-Control:no-cache
-18901 DEBUG [2019-05-11 13:04:12]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
-18908 DEBUG [2019-05-11 13:04:12]  {"access_token":"2.00OFC3IDt2EH9D636de34defypQvtB","remind_in":"157679999","expires_in":157679999,"uid":"2871860412","isRealName":"true"}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2178)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
-18919 DEBUG [2019-05-11 13:04:12]  Request:
-18919 DEBUG [2019-05-11 13:04:12]  GET:https://api.weibo.com/2/users/show.json
-23925 DEBUG [2019-05-11 13:04:17]  Authorization: OAuth2 2.00OFC3IDt2EH9D636de34defypQvtB
-23925 DEBUG [2019-05-11 13:04:17]  API-RemoteIP: 10.3.140.188
-23972 DEBUG [2019-05-11 13:04:17]  Response:
-23972 DEBUG [2019-05-11 13:04:17]  https StatusCode:200
-23972 DEBUG [2019-05-11 13:04:17]  Server:nginx/1.6.1
-23972 DEBUG [2019-05-11 13:04:17]  Date:Sat, 11 May 2019 05:04:16 GMT
-23972 DEBUG [2019-05-11 13:04:17]  Content-Type:application/json;charset=UTF-8
-23972 DEBUG [2019-05-11 13:04:17]  Transfer-Encoding:chunked
-23972 DEBUG [2019-05-11 13:04:17]  Connection:keep-alive
-23973 DEBUG [2019-05-11 13:04:17]  Vary:Accept-Encoding
-23977 DEBUG [2019-05-11 13:04:17]  {"id":2871860412,"idstr":"2871860412","class":1,"screen_name":"Fake2Edison","name":"Fake2Edison","province":"35","city":"8","location":"福建 龙岩","description":"杨","url":"","profile_image_url":"http://tvax3.sinaimg.cn/crop.0.0.641.641.50/ab2d1cbcly8ftp2ibaucgj20ht0htq3o.jpg","cover_image_phone":"http://ww2.sinaimg.cn/crop.0.0.640.640.640/a1d3feabjw1ecat8op0e1j20hs0hswgu.jpg","profile_url":"u/2871860412","domain":"","weihao":"","gender":"m","followers_count":212,"friends_count":114,"pagefriends_count":0,"statuses_count":8,"video_status_count":0,"favourites_count":37,"created_at":"Mon Jul 16 16:54:51 +0800 2012","following":false,"allow_all_act_msg":true,"geo_enabled":true,"verified":false,"verified_type":-1,"remark":"","insecurity":{"sexual_content":false},"status":{"created_at":"Wed Apr 24 12:46:49 +0800 2019","id":4364583290108532,"idstr":"4364583290108532","mid":"4364583290108532","can_edit":false,"show_additional_indication":0,"text":"转发微博","source_allowclick":1,"source_type":1,"source":"<a href=\"http://app.weibo.com/t/feed/2DgU2\" rel=\"nofollow\">MEIZU M15</a>","favorited":false,"truncated":false,"in_reply_to_status_id":"","in_reply_to_user_id":"","in_reply_to_screen_name":"","pic_urls":[],"geo":null,"is_paid":false,"mblog_vip_type":0,"annotations":[{"client_mblogid":"9ff18291-b4f6-4a07-8890-2bdd5f525961"},{"mapi_request":true}],"reposts_count":0,"comments_count":0,"attitudes_count":0,"pending_approval_count":0,"isLongText":false,"reward_exhibition_type":0,"hide_flag":0,"mlevel":0,"visible":{"type":0,"list_id":0},"biz_feature":0,"hasActionTypeCard":0,"darwin_tags":[],"hot_weibo_tags":[],"text_tag_tips":[],"mblogtype":0,"rid":"0","userType":0,"more_info_type":0,"positive_recom_flag":0,"content_auth":0,"gif_ids":"","is_show_bulletin":2,"comment_manage_info":{"comment_permission_type":-1,"approval_comment_type":0}},"ptype":0,"allow_all_comment":true,"avatar_large":"http://tvax3.sinaimg.cn/crop.0.0.641.641.180/ab2d1cbcly8ftp2ibaucgj20ht0htq3o.jpg","avatar_hd":"http://tvax3.sinaimg.cn/crop.0.0.641.641.1024/ab2d1cbcly8ftp2ibaucgj20ht0htq3o.jpg","verified_reason":"","verified_trade":"","verified_reason_url":"","verified_source":"","verified_source_url":"","follow_me":false,"like":false,"like_me":false,"online_status":0,"bi_followers_count":101,"lang":"zh-cn","star":0,"mbtype":0,"mbrank":0,"block_word":0,"block_app":0,"credit_score":80,"user_ability":2098176,"urank":27,"story_read_state":-1,"vclub_member":0,"is_teenager":0,"is_guardian":0,"is_teenager_list":0}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor38.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:152)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 6 more
+Caused by: java.net.SocketException: Network is unreachable (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 9 more
+529  ERROR [2019-05-22 10:33:04]  create connection error, url: jdbc:mysql://39.105.130.67:3306/Editor?useUnicode=true&characterEncoding=UTF8, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
-269768 INFO  [2019-05-11 13:08:23]  {dataSource-1} closed
-0    INFO  [2019-05-11 13:09:43]  {dataSource-1} inited
-276489 DEBUG [2019-05-11 13:14:19]  Request:
-276490 DEBUG [2019-05-11 13:14:19]  POSThttps://api.weibo.com/oauth2/access_token
-281280 DEBUG [2019-05-11 13:14:24]  Request:
-281281 DEBUG [2019-05-11 13:14:24]  POSThttps://api.weibo.com/oauth2/access_token
-282038 DEBUG [2019-05-11 13:14:25]  Response:
-282039 DEBUG [2019-05-11 13:14:25]  https StatusCode:400
-282039 DEBUG [2019-05-11 13:14:25]  Server:nginx/1.6.1
-282039 DEBUG [2019-05-11 13:14:25]  Date:Sat, 11 May 2019 05:14:24 GMT
-282039 DEBUG [2019-05-11 13:14:25]  Transfer-Encoding:chunked
-282039 DEBUG [2019-05-11 13:14:25]  Connection:keep-alive
-282039 DEBUG [2019-05-11 13:14:25]  Pragma:No-cache
-282039 DEBUG [2019-05-11 13:14:25]  Cache-Control:no-cache
-282040 DEBUG [2019-05-11 13:14:25]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
-282049 DEBUG [2019-05-11 13:14:25]  {"error":"invalid_grant","error_code":21325,"request":"/oauth2/access_token","error_uri":"/oauth2/access_token","error_description":"invalid authorization code:38a733d210ec7426d51c3b566ea30c91"}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2178)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
-286604 DEBUG [2019-05-11 13:14:29]  Response:
-286604 DEBUG [2019-05-11 13:14:29]  https StatusCode:400
-286604 DEBUG [2019-05-11 13:14:29]  Server:nginx/1.6.1
-286605 DEBUG [2019-05-11 13:14:29]  Date:Sat, 11 May 2019 05:14:28 GMT
-286605 DEBUG [2019-05-11 13:14:29]  Transfer-Encoding:chunked
-286605 DEBUG [2019-05-11 13:14:29]  Connection:keep-alive
-286605 DEBUG [2019-05-11 13:14:29]  Pragma:No-cache
-286605 DEBUG [2019-05-11 13:14:29]  Cache-Control:no-cache
-286605 DEBUG [2019-05-11 13:14:29]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
-286607 DEBUG [2019-05-11 13:14:29]  {"error":"invalid_grant","error_code":21325,"request":"/oauth2/access_token","error_uri":"/oauth2/access_token","error_description":"invalid authorization code:38a733d210ec7426d51c3b566ea30c91"}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor38.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:152)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 6 more
+Caused by: java.net.SocketException: Network is unreachable (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 9 more
+535  ERROR [2019-05-22 10:33:04]  create connection error, url: jdbc:mysql://39.105.130.67:3306/Editor?useUnicode=true&characterEncoding=UTF8, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
-334665 DEBUG [2019-05-11 13:15:17]  Request:
-334665 DEBUG [2019-05-11 13:15:17]  POSThttps://api.weibo.com/oauth2/access_token
-339721 DEBUG [2019-05-11 13:15:23]  Response:
-339721 DEBUG [2019-05-11 13:15:23]  https StatusCode:400
-339721 DEBUG [2019-05-11 13:15:23]  Server:nginx/1.6.1
-339721 DEBUG [2019-05-11 13:15:23]  Date:Sat, 11 May 2019 05:15:21 GMT
-339721 DEBUG [2019-05-11 13:15:23]  Transfer-Encoding:chunked
-339721 DEBUG [2019-05-11 13:15:23]  Connection:keep-alive
-339721 DEBUG [2019-05-11 13:15:23]  Pragma:No-cache
-339721 DEBUG [2019-05-11 13:15:23]  Cache-Control:no-cache
-339721 DEBUG [2019-05-11 13:15:23]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
-339722 DEBUG [2019-05-11 13:15:23]  {"error":"invalid_grant","error_code":21325,"request":"/oauth2/access_token","error_uri":"/oauth2/access_token","error_description":"invalid authorization code:://localhost:8080/"}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2178)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
-367699 DEBUG [2019-05-11 13:15:51]  Request:
-367700 DEBUG [2019-05-11 13:15:51]  POSThttps://api.weibo.com/oauth2/access_token
-372748 DEBUG [2019-05-11 13:15:56]  Response:
-372749 DEBUG [2019-05-11 13:15:56]  https StatusCode:400
-372749 DEBUG [2019-05-11 13:15:56]  Server:nginx/1.6.1
-372749 DEBUG [2019-05-11 13:15:56]  Date:Sat, 11 May 2019 05:15:54 GMT
-372749 DEBUG [2019-05-11 13:15:56]  Transfer-Encoding:chunked
-372749 DEBUG [2019-05-11 13:15:56]  Connection:keep-alive
-372749 DEBUG [2019-05-11 13:15:56]  Pragma:No-cache
-372749 DEBUG [2019-05-11 13:15:56]  Cache-Control:no-cache
-372749 DEBUG [2019-05-11 13:15:56]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
-372751 DEBUG [2019-05-11 13:15:56]  {"error":"invalid_grant","error_code":21325,"request":"/oauth2/access_token","error_uri":"/oauth2/access_token","error_description":"invalid authorization code:://localhost:8080/"}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor38.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:152)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 6 more
+Caused by: java.net.SocketException: Network is unreachable (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 9 more
+537  ERROR [2019-05-22 10:33:04]  create connection error, url: jdbc:mysql://39.105.130.67:3306/Editor?useUnicode=true&characterEncoding=UTF8, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
-403486 DEBUG [2019-05-11 13:16:26]  Request:
-403486 DEBUG [2019-05-11 13:16:26]  POSThttps://api.weibo.com/oauth2/access_token
-408335 DEBUG [2019-05-11 13:16:31]  Request:
-408335 DEBUG [2019-05-11 13:16:31]  POSThttps://api.weibo.com/oauth2/access_token
-408538 DEBUG [2019-05-11 13:16:31]  Response:
-408538 DEBUG [2019-05-11 13:16:31]  https StatusCode:400
-408539 DEBUG [2019-05-11 13:16:31]  Server:nginx/1.6.1
-408539 DEBUG [2019-05-11 13:16:31]  Date:Sat, 11 May 2019 05:16:30 GMT
-408539 DEBUG [2019-05-11 13:16:31]  Transfer-Encoding:chunked
-408539 DEBUG [2019-05-11 13:16:31]  Connection:keep-alive
-408539 DEBUG [2019-05-11 13:16:31]  Pragma:No-cache
-408539 DEBUG [2019-05-11 13:16:31]  Cache-Control:no-cache
-408539 DEBUG [2019-05-11 13:16:31]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
-408540 DEBUG [2019-05-11 13:16:31]  {"error":"invalid_grant","error_code":21325,"request":"/oauth2/access_token","error_uri":"/oauth2/access_token","error_description":"invalid authorization code:://localhost:8080/"}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2178)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
-413522 DEBUG [2019-05-11 13:16:36]  Response:
-413522 DEBUG [2019-05-11 13:16:36]  https StatusCode:400
-413522 DEBUG [2019-05-11 13:16:36]  Server:nginx/1.6.1
-413523 DEBUG [2019-05-11 13:16:36]  Date:Sat, 11 May 2019 05:16:35 GMT
-413523 DEBUG [2019-05-11 13:16:36]  Transfer-Encoding:chunked
-413523 DEBUG [2019-05-11 13:16:36]  Connection:keep-alive
-413523 DEBUG [2019-05-11 13:16:36]  Pragma:No-cache
-413523 DEBUG [2019-05-11 13:16:36]  Cache-Control:no-cache
-413523 DEBUG [2019-05-11 13:16:36]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
-413525 DEBUG [2019-05-11 13:16:36]  {"error":"invalid_grant","error_code":21325,"request":"/oauth2/access_token","error_uri":"/oauth2/access_token","error_description":"invalid authorization code:://localhost:8080/"}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor38.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:152)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 6 more
+Caused by: java.net.SocketException: Network is unreachable (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 9 more
+539  ERROR [2019-05-22 10:33:04]  create connection error, url: jdbc:mysql://39.105.130.67:3306/Editor?useUnicode=true&characterEncoding=UTF8, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
-443623 DEBUG [2019-05-11 13:17:06]  Request:
-443623 DEBUG [2019-05-11 13:17:06]  POSThttps://api.weibo.com/oauth2/access_token
-448666 DEBUG [2019-05-11 13:17:11]  Response:
-448666 DEBUG [2019-05-11 13:17:11]  https StatusCode:400
-448666 DEBUG [2019-05-11 13:17:11]  Server:nginx/1.6.1
-448666 DEBUG [2019-05-11 13:17:11]  Date:Sat, 11 May 2019 05:17:10 GMT
-448666 DEBUG [2019-05-11 13:17:11]  Transfer-Encoding:chunked
-448666 DEBUG [2019-05-11 13:17:11]  Connection:keep-alive
-448666 DEBUG [2019-05-11 13:17:11]  Pragma:No-cache
-448666 DEBUG [2019-05-11 13:17:11]  Cache-Control:no-cache
-448667 DEBUG [2019-05-11 13:17:11]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
-448668 DEBUG [2019-05-11 13:17:11]  {"error":"invalid_grant","error_code":21325,"request":"/oauth2/access_token","error_uri":"/oauth2/access_token","error_description":"invalid authorization code:://localhost:8080/"}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2178)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
-504096 DEBUG [2019-05-11 13:18:07]  Request:
-504096 DEBUG [2019-05-11 13:18:07]  POSThttps://api.weibo.com/oauth2/access_token
-509153 DEBUG [2019-05-11 13:18:12]  Response:
-509153 DEBUG [2019-05-11 13:18:12]  https StatusCode:400
-509153 DEBUG [2019-05-11 13:18:12]  Server:nginx/1.6.1
-509153 DEBUG [2019-05-11 13:18:12]  Date:Sat, 11 May 2019 05:18:11 GMT
-509153 DEBUG [2019-05-11 13:18:12]  Transfer-Encoding:chunked
-509153 DEBUG [2019-05-11 13:18:12]  Connection:keep-alive
-509153 DEBUG [2019-05-11 13:18:12]  Pragma:No-cache
-509153 DEBUG [2019-05-11 13:18:12]  Cache-Control:no-cache
-509153 DEBUG [2019-05-11 13:18:12]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
-509154 DEBUG [2019-05-11 13:18:12]  {"error":"invalid_grant","error_code":21325,"request":"/oauth2/access_token","error_uri":"/oauth2/access_token","error_description":"invalid authorization code:://localhost:8080/"}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor38.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:152)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 6 more
+Caused by: java.net.SocketException: Network is unreachable (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 9 more
+540  ERROR [2019-05-22 10:33:04]  create connection error, url: jdbc:mysql://39.105.130.67:3306/Editor?useUnicode=true&characterEncoding=UTF8, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
-525495 DEBUG [2019-05-11 13:18:28]  Request:
-525495 DEBUG [2019-05-11 13:18:28]  POSThttps://api.weibo.com/oauth2/access_token
-530518 DEBUG [2019-05-11 13:18:33]  Response:
-530518 DEBUG [2019-05-11 13:18:33]  https StatusCode:400
-530518 DEBUG [2019-05-11 13:18:33]  Server:nginx/1.6.1
-530518 DEBUG [2019-05-11 13:18:33]  Date:Sat, 11 May 2019 05:18:32 GMT
-530518 DEBUG [2019-05-11 13:18:33]  Transfer-Encoding:chunked
-530518 DEBUG [2019-05-11 13:18:33]  Connection:keep-alive
-530518 DEBUG [2019-05-11 13:18:33]  Pragma:No-cache
-530518 DEBUG [2019-05-11 13:18:33]  Cache-Control:no-cache
-530518 DEBUG [2019-05-11 13:18:33]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
-530519 DEBUG [2019-05-11 13:18:33]  {"error":"invalid_grant","error_code":21325,"request":"/oauth2/access_token","error_uri":"/oauth2/access_token","error_description":"invalid authorization code:://localhost:8080/"}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2178)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
-5086667 INFO  [2019-05-11 14:34:29]  {dataSource-1} closed
-0    INFO  [2019-05-11 14:39:55]  {dataSource-1} inited
-129218 INFO  [2019-05-11 14:42:04]  {dataSource-1} closed
-0    INFO  [2019-05-11 14:44:08]  {dataSource-1} inited
-391122 INFO  [2019-05-11 14:50:39]  {dataSource-1} closed
-0    INFO  [2019-05-11 14:51:40]  {dataSource-1} inited
-5004102 DEBUG [2019-05-11 16:15:04]  Request:
-5004125 DEBUG [2019-05-11 16:15:04]  POSThttps://api.weibo.com/oauth2/access_token
-5009673 DEBUG [2019-05-11 16:15:10]  Response:
-5009673 DEBUG [2019-05-11 16:15:10]  https StatusCode:200
-5009673 DEBUG [2019-05-11 16:15:10]  Server:nginx/1.6.1
-5009673 DEBUG [2019-05-11 16:15:10]  Date:Sat, 11 May 2019 08:15:08 GMT
-5009673 DEBUG [2019-05-11 16:15:10]  Content-Type:application/json;charset=UTF-8
-5009674 DEBUG [2019-05-11 16:15:10]  Content-Length:134
-5009674 DEBUG [2019-05-11 16:15:10]  Connection:keep-alive
-5009674 DEBUG [2019-05-11 16:15:10]  Pragma:No-cache
-5009674 DEBUG [2019-05-11 16:15:10]  Cache-Control:no-cache
-5009674 DEBUG [2019-05-11 16:15:10]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
-5009683 DEBUG [2019-05-11 16:15:10]  {"access_token":"2.00aKqFDHt2EH9D520048bab1ClRPeC","remind_in":"2630691","expires_in":2630691,"uid":"6458651016","isRealName":"false"}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor38.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:152)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 6 more
+Caused by: java.net.SocketException: Network is unreachable (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 9 more
+542  ERROR [2019-05-22 10:33:04]  create connection error, url: jdbc:mysql://39.105.130.67:3306/Editor?useUnicode=true&characterEncoding=UTF8, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
-5009697 DEBUG [2019-05-11 16:15:10]  Request:
-5009698 DEBUG [2019-05-11 16:15:10]  GET:https://api.weibo.com/2/users/show.json
-5014703 DEBUG [2019-05-11 16:15:15]  Authorization: OAuth2 2.00aKqFDHt2EH9D520048bab1ClRPeC
-5014703 DEBUG [2019-05-11 16:15:15]  API-RemoteIP: 10.3.167.212
-5014773 DEBUG [2019-05-11 16:15:15]  Response:
-5014773 DEBUG [2019-05-11 16:15:15]  https StatusCode:200
-5014773 DEBUG [2019-05-11 16:15:15]  Server:nginx/1.6.1
-5014773 DEBUG [2019-05-11 16:15:15]  Date:Sat, 11 May 2019 08:15:13 GMT
-5014773 DEBUG [2019-05-11 16:15:15]  Content-Type:application/json;charset=UTF-8
-5014773 DEBUG [2019-05-11 16:15:15]  Transfer-Encoding:chunked
-5014773 DEBUG [2019-05-11 16:15:15]  Connection:keep-alive
-5014773 DEBUG [2019-05-11 16:15:15]  Vary:Accept-Encoding
-5014775 DEBUG [2019-05-11 16:15:15]  {"id":6458651016,"idstr":"6458651016","class":1,"screen_name":"Fake2Edison6067","name":"Fake2Edison6067","province":"100","city":"1000","location":"其他","description":"","url":"","profile_image_url":"http://tvax1.sinaimg.cn/crop.0.0.132.132.50/00735QaAly8fnczefjuwnj303o03o744.jpg","cover_image_phone":"http://ww1.sinaimg.cn/crop.0.0.640.640.640/549d0121tw1egm1kjly3jj20hs0hsq4f.jpg","profile_url":"u/6458651016","domain":"","weihao":"","gender":"m","followers_count":1,"friends_count":2,"pagefriends_count":0,"statuses_count":0,"video_status_count":0,"favourites_count":0,"created_at":"Thu Jan 11 21:19:51 +0800 2018","following":false,"allow_all_act_msg":false,"geo_enabled":true,"verified":false,"verified_type":-1,"remark":"","insecurity":{"sexual_content":false},"ptype":0,"allow_all_comment":true,"avatar_large":"http://tvax1.sinaimg.cn/crop.0.0.132.132.180/00735QaAly8fnczefjuwnj303o03o744.jpg","avatar_hd":"http://tvax1.sinaimg.cn/crop.0.0.132.132.1024/00735QaAly8fnczefjuwnj303o03o744.jpg","verified_reason":"","verified_trade":"","verified_reason_url":"","verified_source":"","verified_source_url":"","follow_me":false,"like":false,"like_me":false,"online_status":0,"bi_followers_count":0,"lang":"zh-cn","star":0,"mbtype":0,"mbrank":0,"block_word":0,"block_app":0,"credit_score":80,"user_ability":0,"urank":0,"story_read_state":-1,"vclub_member":0,"is_teenager":0,"is_guardian":0,"is_teenager_list":0}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2178)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
-8420177 INFO  [2019-05-11 17:12:00]  {dataSource-1} closed
-1    INFO  [2019-05-11 17:13:10]  {dataSource-1} inited
-286564 INFO  [2019-05-11 17:17:56]  {dataSource-1} closed
-0    INFO  [2019-05-11 17:19:12]  {dataSource-1} inited
-341883 DEBUG [2019-05-11 17:24:54]  Request:
-341883 DEBUG [2019-05-11 17:24:54]  POSThttps://api.weibo.com/2/statuses/update.json
-486921 DEBUG [2019-05-11 17:27:19]  Request:
-486923 DEBUG [2019-05-11 17:27:19]  POSThttps://api.weibo.com/2/statuses/update.json
-586826 INFO  [2019-05-11 17:28:59]  {dataSource-1} closed
-0    INFO  [2019-05-11 17:30:08]  {dataSource-1} inited
-13292 DEBUG [2019-05-11 17:30:21]  Request:
-13295 DEBUG [2019-05-11 17:30:21]  POSThttps://api.weibo.com/2/statuses/update.json
-45851 DEBUG [2019-05-11 17:30:54]  Request:
-45852 DEBUG [2019-05-11 17:30:54]  POSThttps://api.weibo.com/2/statuses/update.json
-69396 INFO  [2019-05-11 17:31:17]  {dataSource-1} closed
-0    INFO  [2019-05-11 17:32:12]  {dataSource-1} inited
-12368 DEBUG [2019-05-11 17:32:25]  Request:
-12368 DEBUG [2019-05-11 17:32:25]  POSThttps://api.weibo.com/2/statuses/update.json
-17420 DEBUG [2019-05-11 17:32:30]  Authorization: OAuth2 2.00OFC3IDt2EH9D636de34defypQvtB
-17420 DEBUG [2019-05-11 17:32:30]  API-RemoteIP: 10.3.167.212
-17733 DEBUG [2019-05-11 17:32:30]  Response:
-17733 DEBUG [2019-05-11 17:32:30]  https StatusCode:400
-17733 DEBUG [2019-05-11 17:32:30]  Server:nginx/1.6.1
-17733 DEBUG [2019-05-11 17:32:30]  Date:Sat, 11 May 2019 09:32:28 GMT
-17733 DEBUG [2019-05-11 17:32:30]  Content-Type:application/json;charset=UTF-8
-17734 DEBUG [2019-05-11 17:32:30]  Transfer-Encoding:chunked
-17734 DEBUG [2019-05-11 17:32:30]  Connection:keep-alive
-17734 DEBUG [2019-05-11 17:32:30]  Api-Server-IP:10.39.58.35
-17734 DEBUG [2019-05-11 17:32:30]  Vary:Accept-Encoding
-17741 DEBUG [2019-05-11 17:32:30]  {"error":"Ip Limit, request ip is not contained in safety ip","error_code":10004,"request":"/2/statuses/update.json"}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor38.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:152)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 6 more
+Caused by: java.net.SocketException: Network is unreachable (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 9 more
+544  ERROR [2019-05-22 10:33:04]  create connection error, url: jdbc:mysql://39.105.130.67:3306/Editor?useUnicode=true&characterEncoding=UTF8, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
-128511 DEBUG [2019-05-11 17:34:21]  Request:
-128511 DEBUG [2019-05-11 17:34:21]  POSThttps://api.weibo.com/2/statuses/update.json
-133523 DEBUG [2019-05-11 17:34:26]  Authorization: OAuth2 2.00OFC3IDt2EH9D636de34defypQvtB
-133523 DEBUG [2019-05-11 17:34:26]  API-RemoteIP: 10.3.167.212
-133694 DEBUG [2019-05-11 17:34:26]  Response:
-133694 DEBUG [2019-05-11 17:34:26]  https StatusCode:400
-133694 DEBUG [2019-05-11 17:34:26]  Server:nginx/1.6.1
-133694 DEBUG [2019-05-11 17:34:26]  Date:Sat, 11 May 2019 09:34:24 GMT
-133694 DEBUG [2019-05-11 17:34:26]  Content-Type:application/json;charset=UTF-8
-133694 DEBUG [2019-05-11 17:34:26]  Transfer-Encoding:chunked
-133694 DEBUG [2019-05-11 17:34:26]  Connection:keep-alive
-133695 DEBUG [2019-05-11 17:34:26]  Api-Server-IP:10.39.58.33
-133695 DEBUG [2019-05-11 17:34:26]  Vary:Accept-Encoding
-133696 DEBUG [2019-05-11 17:34:26]  {"error":"Ip Limit, request ip is not contained in safety ip","error_code":10004,"request":"/2/statuses/update.json"}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2178)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
-603964 INFO  [2019-05-11 17:42:16]  {dataSource-1} closed
-0    INFO  [2019-05-11 17:43:41]  {dataSource-1} inited
-124634 DEBUG [2019-05-11 17:45:46]  Request:
-124634 DEBUG [2019-05-11 17:45:46]  POSThttps://api.weibo.com/oauth2/access_token
-130715 DEBUG [2019-05-11 17:45:52]  Response:
-130715 DEBUG [2019-05-11 17:45:52]  https StatusCode:200
-130715 DEBUG [2019-05-11 17:45:52]  Server:nginx/1.6.1
-130716 DEBUG [2019-05-11 17:45:52]  Date:Sat, 11 May 2019 09:45:50 GMT
-130716 DEBUG [2019-05-11 17:45:52]  Content-Type:application/json;charset=UTF-8
-130716 DEBUG [2019-05-11 17:45:52]  Content-Length:137
-130716 DEBUG [2019-05-11 17:45:52]  Connection:keep-alive
-130716 DEBUG [2019-05-11 17:45:52]  Pragma:No-cache
-130716 DEBUG [2019-05-11 17:45:52]  Cache-Control:no-cache
-130716 DEBUG [2019-05-11 17:45:52]  Expires:Thu, 01 Jan 1970 00:00:00 GMT
-130724 DEBUG [2019-05-11 17:45:52]  {"access_token":"2.00OFC3IDSZjDEBcb01a2cf77yvNgEC","remind_in":"157679999","expires_in":157679999,"uid":"2871860412","isRealName":"true"}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor38.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:152)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 6 more
+Caused by: java.net.SocketException: Network is unreachable (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 9 more
+1324843 INFO  [2019-05-22 10:55:09]  {dataSource-1} closed
+0    INFO  [2019-05-22 22:28:50]  {dataSource-1} inited
+416763 INFO  [2019-05-22 22:35:47]  {dataSource-1} closed
+0    INFO  [2019-05-22 22:36:46]  {dataSource-1} inited
+453959 INFO  [2019-05-22 22:44:20]  {dataSource-1} closed
+0    INFO  [2019-05-22 22:45:45]  {dataSource-1} inited
+993155 INFO  [2019-05-22 23:02:18]  {dataSource-1} closed
+0    INFO  [2019-05-22 23:02:58]  {dataSource-1} inited
+221783 INFO  [2019-05-22 23:06:40]  {dataSource-1} closed
+0    INFO  [2019-05-22 23:07:22]  {dataSource-1} inited
+111607 INFO  [2019-05-22 23:09:14]  {dataSource-1} closed
+0    INFO  [2019-05-22 23:10:01]  {dataSource-1} inited
+232324 INFO  [2019-05-22 23:13:53]  {dataSource-1} closed
+0    INFO  [2019-05-22 23:14:33]  {dataSource-1} inited
+62006 DEBUG [2019-05-22 23:15:35]  skip not validate connection.
+69855 ERROR [2019-05-22 23:15:43]  create connection error, url: jdbc:mysql://39.105.130.67:3306/Editor?useUnicode=true&characterEncoding=UTF8, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
-130739 DEBUG [2019-05-11 17:45:52]  Request:
-130739 DEBUG [2019-05-11 17:45:52]  GET:https://api.weibo.com/2/users/show.json
-135746 DEBUG [2019-05-11 17:45:57]  Authorization: OAuth2 2.00OFC3IDSZjDEBcb01a2cf77yvNgEC
-135746 DEBUG [2019-05-11 17:45:57]  API-RemoteIP: 10.3.167.212
-135794 DEBUG [2019-05-11 17:45:57]  Response:
-135794 DEBUG [2019-05-11 17:45:57]  https StatusCode:200
-135794 DEBUG [2019-05-11 17:45:57]  Server:nginx/1.6.1
-135794 DEBUG [2019-05-11 17:45:57]  Date:Sat, 11 May 2019 09:45:55 GMT
-135794 DEBUG [2019-05-11 17:45:57]  Content-Type:application/json;charset=UTF-8
-135794 DEBUG [2019-05-11 17:45:57]  Transfer-Encoding:chunked
-135794 DEBUG [2019-05-11 17:45:57]  Connection:keep-alive
-135794 DEBUG [2019-05-11 17:45:57]  Vary:Accept-Encoding
-135795 DEBUG [2019-05-11 17:45:57]  {"id":2871860412,"idstr":"2871860412","class":1,"screen_name":"Fake2Edison","name":"Fake2Edison","province":"35","city":"8","location":"福建 龙岩","description":"杨","url":"","profile_image_url":"http://tvax3.sinaimg.cn/crop.0.0.641.641.50/ab2d1cbcly8ftp2ibaucgj20ht0htq3o.jpg","cover_image_phone":"http://ww2.sinaimg.cn/crop.0.0.640.640.640/a1d3feabjw1ecat8op0e1j20hs0hswgu.jpg","profile_url":"u/2871860412","domain":"","weihao":"","gender":"m","followers_count":212,"friends_count":114,"pagefriends_count":0,"statuses_count":8,"video_status_count":0,"favourites_count":37,"created_at":"Mon Jul 16 16:54:51 +0800 2012","following":false,"allow_all_act_msg":true,"geo_enabled":true,"verified":false,"verified_type":-1,"remark":"","insecurity":{"sexual_content":false},"status":{"created_at":"Wed Apr 24 12:46:49 +0800 2019","id":4364583290108532,"idstr":"4364583290108532","mid":"4364583290108532","can_edit":false,"show_additional_indication":0,"text":"转发微博","source_allowclick":1,"source_type":1,"source":"<a href=\"http://app.weibo.com/t/feed/2DgU2\" rel=\"nofollow\">MEIZU M15</a>","favorited":false,"truncated":false,"in_reply_to_status_id":"","in_reply_to_user_id":"","in_reply_to_screen_name":"","pic_urls":[],"geo":null,"is_paid":false,"mblog_vip_type":0,"annotations":[{"client_mblogid":"9ff18291-b4f6-4a07-8890-2bdd5f525961"},{"mapi_request":true}],"reposts_count":0,"comments_count":0,"attitudes_count":0,"pending_approval_count":0,"isLongText":false,"reward_exhibition_type":0,"hide_flag":0,"mlevel":0,"visible":{"type":0,"list_id":0},"biz_feature":0,"hasActionTypeCard":0,"darwin_tags":[],"hot_weibo_tags":[],"text_tag_tips":[],"mblogtype":0,"rid":"0","userType":0,"more_info_type":0,"positive_recom_flag":0,"content_auth":0,"gif_ids":"","is_show_bulletin":2,"comment_manage_info":{"comment_permission_type":-1,"approval_comment_type":0}},"ptype":0,"allow_all_comment":true,"avatar_large":"http://tvax3.sinaimg.cn/crop.0.0.641.641.180/ab2d1cbcly8ftp2ibaucgj20ht0htq3o.jpg","avatar_hd":"http://tvax3.sinaimg.cn/crop.0.0.641.641.1024/ab2d1cbcly8ftp2ibaucgj20ht0htq3o.jpg","verified_reason":"","verified_trade":"","verified_reason_url":"","verified_source":"","verified_source_url":"","follow_me":false,"like":false,"like_me":false,"online_status":0,"bi_followers_count":101,"lang":"zh-cn","star":0,"mbtype":0,"mbrank":0,"block_word":0,"block_app":0,"credit_score":80,"user_ability":2098176,"urank":27,"story_read_state":-1,"vclub_member":0,"is_teenager":0,"is_guardian":0,"is_teenager_list":0}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2178)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
-159259 DEBUG [2019-05-11 17:46:20]  Request:
-159260 DEBUG [2019-05-11 17:46:20]  POSThttps://api.weibo.com/2/statuses/update.json
-164265 DEBUG [2019-05-11 17:46:25]  Authorization: OAuth2 2.00OFC3IDSZjDEBcb01a2cf77yvNgEC
-164265 DEBUG [2019-05-11 17:46:25]  API-RemoteIP: 10.3.167.212
-164440 DEBUG [2019-05-11 17:46:26]  Response:
-164440 DEBUG [2019-05-11 17:46:26]  https StatusCode:400
-164440 DEBUG [2019-05-11 17:46:26]  Server:nginx/1.6.1
-164441 DEBUG [2019-05-11 17:46:26]  Date:Sat, 11 May 2019 09:46:24 GMT
-164441 DEBUG [2019-05-11 17:46:26]  Content-Type:application/json;charset=UTF-8
-164441 DEBUG [2019-05-11 17:46:26]  Transfer-Encoding:chunked
-164441 DEBUG [2019-05-11 17:46:26]  Connection:keep-alive
-164441 DEBUG [2019-05-11 17:46:26]  Api-Server-IP:10.22.6.16
-164441 DEBUG [2019-05-11 17:46:26]  Vary:Accept-Encoding
-164442 DEBUG [2019-05-11 17:46:26]  {"error":"Ip Limit, request ip is not contained in safety ip","error_code":10004,"request":"/2/statuses/update.json"}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:152)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 6 more
+Caused by: java.net.SocketException: Network is unreachable (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 9 more
+77694 ERROR [2019-05-22 23:15:51]  create connection error, url: jdbc:mysql://39.105.130.67:3306/Editor?useUnicode=true&characterEncoding=UTF8, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
-302679 DEBUG [2019-05-11 17:48:44]  Request:
-302679 DEBUG [2019-05-11 17:48:44]  POSThttps://api.weibo.com/2/statuses/update.json
-307685 DEBUG [2019-05-11 17:48:49]  Authorization: OAuth2 2.00OFC3IDSZjDEBcb01a2cf77yvNgEC
-307685 DEBUG [2019-05-11 17:48:49]  API-RemoteIP: 10.3.167.212
-308066 DEBUG [2019-05-11 17:48:49]  Response:
-308067 DEBUG [2019-05-11 17:48:49]  https StatusCode:400
-308067 DEBUG [2019-05-11 17:48:49]  Server:nginx/1.6.1
-308067 DEBUG [2019-05-11 17:48:49]  Date:Sat, 11 May 2019 09:48:47 GMT
-308067 DEBUG [2019-05-11 17:48:49]  Content-Type:application/json;charset=UTF-8
-308067 DEBUG [2019-05-11 17:48:49]  Transfer-Encoding:chunked
-308067 DEBUG [2019-05-11 17:48:49]  Connection:keep-alive
-308067 DEBUG [2019-05-11 17:48:49]  Api-Server-IP:10.22.6.22
-308067 DEBUG [2019-05-11 17:48:49]  Vary:Accept-Encoding
-308069 DEBUG [2019-05-11 17:48:49]  {"error":"Ip Limit, request ip is not contained in safety ip","error_code":10004,"request":"/2/statuses/update.json"}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2178)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
-426366 DEBUG [2019-05-11 17:50:48]  Request:
-426366 DEBUG [2019-05-11 17:50:48]  POSThttps://api.weibo.com/2/statuses/update.json
-431373 DEBUG [2019-05-11 17:50:53]  Authorization: OAuth2 2.00OFC3IDSZjDEBcb01a2cf77yvNgEC
-431373 DEBUG [2019-05-11 17:50:53]  API-RemoteIP: 10.3.167.212
-431542 DEBUG [2019-05-11 17:50:53]  Response:
-431542 DEBUG [2019-05-11 17:50:53]  https StatusCode:400
-431542 DEBUG [2019-05-11 17:50:53]  Server:nginx/1.6.1
-431542 DEBUG [2019-05-11 17:50:53]  Date:Sat, 11 May 2019 09:50:51 GMT
-431542 DEBUG [2019-05-11 17:50:53]  Content-Type:application/json;charset=UTF-8
-431542 DEBUG [2019-05-11 17:50:53]  Transfer-Encoding:chunked
-431542 DEBUG [2019-05-11 17:50:53]  Connection:keep-alive
-431542 DEBUG [2019-05-11 17:50:53]  Api-Server-IP:10.39.58.33
-431542 DEBUG [2019-05-11 17:50:53]  Vary:Accept-Encoding
-431543 DEBUG [2019-05-11 17:50:53]  {"error":"Ip Limit, request ip is not contained in safety ip","error_code":10004,"request":"/2/statuses/update.json"}
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:152)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 6 more
+Caused by: java.net.ConnectException: Operation timed out (Connection timed out)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 9 more
+85537 ERROR [2019-05-22 23:15:59]  create connection error, url: jdbc:mysql://39.105.130.67:3306/Editor?useUnicode=true&characterEncoding=UTF8, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
-5618320 INFO  [2019-05-11 19:17:19]  {dataSource-1} closed
-0    INFO  [2019-05-12 12:10:48]  {dataSource-1} inited
-1383867 INFO  [2019-05-12 12:33:52]  {dataSource-1} closed
-0    INFO  [2019-05-12 12:34:54]  {dataSource-1} inited
-1980858 INFO  [2019-05-12 13:07:54]  {dataSource-1} closed
-0    INFO  [2019-05-12 14:08:08]  {dataSource-1} inited
-1022880 INFO  [2019-05-12 14:25:11]  {dataSource-1} closed
-0    INFO  [2019-05-12 14:26:06]  {dataSource-1} inited
-613396 INFO  [2019-05-12 14:36:20]  {dataSource-1} closed
-0    INFO  [2019-05-12 14:37:14]  {dataSource-1} inited
-3030240 INFO  [2019-05-12 15:27:44]  {dataSource-1} closed
-0    INFO  [2019-05-13 08:50:41]  {dataSource-1} inited
-1411164 INFO  [2019-05-13 09:14:12]  {dataSource-1} closed
-2    INFO  [2019-05-13 09:16:46]  {dataSource-1} inited
-300656 INFO  [2019-05-13 09:21:47]  {dataSource-1} closed
-0    INFO  [2019-05-13 09:24:44]  {dataSource-1} inited
-2515871 INFO  [2019-05-13 10:06:40]  {dataSource-1} closed
-0    INFO  [2019-05-13 15:15:12]  {dataSource-1} inited
-178626 INFO  [2019-05-13 15:18:11]  {dataSource-1} closed
-0    INFO  [2019-05-13 15:19:17]  {dataSource-1} inited
-915332 INFO  [2019-05-13 15:34:33]  {dataSource-1} closed
-0    INFO  [2019-05-13 16:43:49]  {dataSource-1} inited
-190751 INFO  [2019-05-13 16:47:00]  {dataSource-1} closed
-0    INFO  [2019-05-13 16:48:02]  {dataSource-1} inited
-1210558 INFO  [2019-05-13 17:08:13]  {dataSource-1} closed
-0    INFO  [2019-05-13 17:09:04]  {dataSource-1} inited
-1690005 INFO  [2019-05-13 17:37:14]  {dataSource-1} closed
-0    INFO  [2019-05-14 09:27:36]  {dataSource-1} inited
-616924 INFO  [2019-05-14 09:37:53]  {dataSource-1} closed
-0    INFO  [2019-05-14 09:38:50]  {dataSource-1} inited
-1765784 INFO  [2019-05-14 10:08:16]  {dataSource-1} closed
-0    INFO  [2019-05-14 15:06:43]  {dataSource-1} inited
-84652 INFO  [2019-05-14 15:08:08]  {dataSource-1} closed
-0    INFO  [2019-05-14 15:09:15]  {dataSource-1} inited
-168304 INFO  [2019-05-14 15:12:03]  {dataSource-1} closed
-0    INFO  [2019-05-14 15:12:49]  {dataSource-1} inited
-169091 INFO  [2019-05-14 15:15:38]  {dataSource-1} closed
-0    INFO  [2019-05-14 15:16:28]  {dataSource-1} inited
-728900 INFO  [2019-05-14 15:28:37]  {dataSource-1} closed
-0    INFO  [2019-05-14 15:29:22]  {dataSource-1} inited
-7628434 INFO  [2019-05-14 17:36:31]  {dataSource-1} closed
-0    INFO  [2019-05-14 17:39:01]  {dataSource-1} inited
-103407 INFO  [2019-05-14 17:40:45]  {dataSource-1} closed
-0    INFO  [2019-05-14 17:42:45]  {dataSource-1} inited
-349418 INFO  [2019-05-14 17:48:34]  {dataSource-1} closed
-1    INFO  [2019-05-14 17:51:05]  {dataSource-1} inited
-366372 INFO  [2019-05-14 17:57:12]  {dataSource-1} closed
-0    INFO  [2019-05-14 17:58:01]  {dataSource-1} inited
-12412 INFO  [2019-05-14 17:58:14]  {dataSource-1} closed
-0    INFO  [2019-05-15 09:03:16]  {dataSource-1} inited
-379267 INFO  [2019-05-15 09:09:35]  {dataSource-1} closed
-0    INFO  [2019-05-15 09:10:32]  {dataSource-1} inited
-272098 INFO  [2019-05-15 09:15:04]  {dataSource-1} closed
-0    INFO  [2019-05-15 09:16:16]  {dataSource-1} inited
-473970 INFO  [2019-05-15 09:24:10]  {dataSource-1} closed
-0    INFO  [2019-05-15 09:25:04]  {dataSource-1} inited
-75665 INFO  [2019-05-15 09:26:20]  {dataSource-1} closed
-0    INFO  [2019-05-15 09:27:29]  {dataSource-1} inited
-144971 INFO  [2019-05-15 09:29:54]  {dataSource-1} closed
-0    INFO  [2019-05-15 09:31:31]  {dataSource-1} inited
-23284 INFO  [2019-05-15 09:31:54]  {dataSource-1} closed
-0    INFO  [2019-05-15 09:32:47]  {dataSource-1} inited
-37694 INFO  [2019-05-15 09:33:24]  {dataSource-1} closed
-0    INFO  [2019-05-15 09:34:16]  {dataSource-1} inited
-107546 INFO  [2019-05-15 09:36:03]  {dataSource-1} closed
-0    INFO  [2019-05-15 09:36:52]  {dataSource-1} inited
-143701 INFO  [2019-05-15 09:39:16]  {dataSource-1} closed
-1    INFO  [2019-05-15 09:40:07]  {dataSource-1} inited
-52826 INFO  [2019-05-15 09:41:00]  {dataSource-1} closed
-3    INFO  [2019-05-15 09:41:53]  {dataSource-1} inited
-31583 INFO  [2019-05-15 09:42:24]  {dataSource-1} closed
-0    INFO  [2019-05-15 09:43:16]  {dataSource-1} inited
-18596 INFO  [2019-05-15 09:43:35]  {dataSource-1} closed
-0    INFO  [2019-05-15 09:44:39]  {dataSource-1} inited
-221094 INFO  [2019-05-15 09:48:20]  {dataSource-1} closed
-0    INFO  [2019-05-15 09:49:10]  {dataSource-1} inited
-130138 INFO  [2019-05-15 09:51:20]  {dataSource-1} closed
-0    INFO  [2019-05-15 09:52:09]  {dataSource-1} inited
-451622 INFO  [2019-05-15 09:59:40]  {dataSource-1} closed
-1    INFO  [2019-05-15 10:00:32]  {dataSource-1} inited
-138150 INFO  [2019-05-15 10:02:50]  {dataSource-1} closed
-0    INFO  [2019-05-15 10:04:08]  {dataSource-1} inited
-180167 INFO  [2019-05-15 10:07:08]  {dataSource-1} closed
-0    INFO  [2019-05-15 10:07:58]  {dataSource-1} inited
-70776 INFO  [2019-05-15 10:09:09]  {dataSource-1} closed
-0    INFO  [2019-05-15 10:10:15]  {dataSource-1} inited
-114889 INFO  [2019-05-15 10:12:10]  {dataSource-1} closed
-0    INFO  [2019-05-15 10:12:59]  {dataSource-1} inited
-369539 INFO  [2019-05-15 10:19:09]  {dataSource-1} closed
-0    INFO  [2019-05-15 10:20:33]  {dataSource-1} inited
-46727 INFO  [2019-05-15 10:21:20]  {dataSource-1} closed
-1    INFO  [2019-05-15 10:22:11]  {dataSource-1} inited
-435455 INFO  [2019-05-15 10:29:26]  {dataSource-1} closed
-0    INFO  [2019-05-15 10:30:20]  {dataSource-1} inited
-77074 INFO  [2019-05-15 10:31:38]  {dataSource-1} closed
-0    INFO  [2019-05-15 10:35:21]  {dataSource-1} inited
-592489 INFO  [2019-05-15 10:45:13]  {dataSource-1} closed
-0    INFO  [2019-05-15 10:46:05]  {dataSource-1} inited
-30066 INFO  [2019-05-15 10:46:35]  {dataSource-1} closed
-0    INFO  [2019-05-15 10:47:48]  {dataSource-1} inited
-296010 INFO  [2019-05-15 10:52:44]  {dataSource-1} closed
-1    INFO  [2019-05-15 10:55:00]  {dataSource-1} inited
-28337 INFO  [2019-05-15 10:55:29]  {dataSource-1} closed
-0    INFO  [2019-05-15 10:56:21]  {dataSource-1} inited
-559704 INFO  [2019-05-15 11:05:40]  {dataSource-1} closed
-1    INFO  [2019-05-15 11:13:25]  {dataSource-1} inited
-313232 INFO  [2019-05-15 11:18:38]  {dataSource-1} closed
-0    INFO  [2019-05-15 11:20:14]  {dataSource-1} inited
-148941 INFO  [2019-05-15 11:22:43]  {dataSource-1} closed
-0    INFO  [2019-05-15 11:23:45]  {dataSource-1} inited
-579463 INFO  [2019-05-15 11:33:24]  {dataSource-1} closed
-0    INFO  [2019-05-15 13:36:43]  {dataSource-1} inited
-448574 INFO  [2019-05-15 13:44:11]  {dataSource-1} closed
-0    INFO  [2019-05-15 13:45:28]  {dataSource-1} inited
-125183 INFO  [2019-05-15 13:47:33]  {dataSource-1} closed
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2178)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:152)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 6 more
+Caused by: java.net.ConnectException: Operation timed out (Connection timed out)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 9 more
+93391 ERROR [2019-05-22 23:16:06]  create connection error, url: jdbc:mysql://39.105.130.67:3306/Editor?useUnicode=true&characterEncoding=UTF8, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2178)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:152)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 6 more
+Caused by: java.net.ConnectException: Operation timed out (Connection timed out)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 9 more
+348810 INFO  [2019-05-22 23:20:22]  {dataSource-1} closed
+0    INFO  [2019-05-25 13:13:35]  {dataSource-1} inited
+88379 INFO  [2019-05-25 13:15:04]  {dataSource-1} closed
+0    INFO  [2019-05-25 13:16:21]  {dataSource-1} inited
+50645 INFO  [2019-05-25 13:17:11]  {dataSource-1} closed
+0    INFO  [2019-05-25 13:18:00]  {dataSource-1} inited
+132568 INFO  [2019-05-25 13:20:13]  {dataSource-1} closed

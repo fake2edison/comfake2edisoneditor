@@ -19,4 +19,6 @@ public interface SyncHistoryMapper {
     public ArrayList<SyncHistory> selectSyncHistory();
 
     public ArrayList<SyncMap> countSync();
+
+    public ArrayList<SyncHistory> selectSyncHistoryByUserIdAndContentId(@Param("uid") int uid, @Param("contentid") int contentid);
 }

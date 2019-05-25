@@ -36,4 +36,9 @@ public class SyncHistoryService {
         ArrayList<SyncMap> syncMapArrayList = syncHistoryMapper.countSync();
         return syncMapArrayList;
     }
+
+    public ArrayList<SyncHistory> selectSyncHistoryByUserIdAndContentId(int uid, int contentid){
+        ArrayList<SyncHistory> syncHistoryArrayList = syncHistoryMapper.selectSyncHistoryByUserIdAndContentId(uid,contentid);
+        return syncHistoryArrayList;
+    }
 }

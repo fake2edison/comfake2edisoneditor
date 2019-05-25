@@ -179,4 +179,11 @@ public class TemplateController {
         }
     }
 
+    @RequestMapping(value = "/getTemplateById",method = RequestMethod.GET)
+    @ResponseBody
+    public Template getTemplateById(@RequestParam("id") int id){
+        Template template = templateService.getTemplateById(id);
+        return template;
+    }
+
 }

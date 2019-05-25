@@ -5,15 +5,7 @@
         <id column="id" jdbcType="INTEGER" property="id"></id>
         <result column="name" jdbcType="VARCHAR" property="name"></result>
         <result column="telephone" jdbcType="VARCHAR" property="telephone"></result>
-        <result column="sex" jdbcType="INTEGER" property="sex"></result>
         <result column="passwd" jdbcType="VARCHAR" property="passwd"></result>
-        <result column="img" jdbcType="VARCHAR" property="img"></result>
-        <result column="birth" jdbcType="DATE" property="birth"></result>
-        <result column="favorite_limit" jdbcType="INTEGER" property="favorite_limit"></result>
-        <result column="photo_limit" jdbcType="INTEGER" property="photo_limit"></result>
-        <result column="template_limit" jdbcType="INTEGER" property="template_limit"></result>
-        <result column="gif_limit" jdbcType="INTEGER" property="gif_limit"></result>
-        <result column="apply_limit" jdbcType="INTEGER" property="apply_limit"></result>
         <result column="is_admin" jdbcType="INTEGER" property="is_admin"></result>
     </resultMap>
     <select id="selectUserByLogin" resultMap="BaseResultMap">

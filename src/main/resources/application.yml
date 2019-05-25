@@ -1,6 +1,12 @@
+web:
+  upload-path: /Users/fake2edison/Desktop
 spring:
   profiles:
     active: dev
+  mvc:
+    static-path-pattern: /**
+  resources:
+    static-locations: /META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${web.upload-path}
 server:
   port: 8881
   tomcat:

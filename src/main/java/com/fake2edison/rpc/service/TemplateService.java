@@ -53,5 +53,13 @@ public class TemplateService {
         int count = templateMapper.getTemplateCountByUser(uid);
         return count;
     }
+    public int addFavoritesByID(String id){
+        int count = templateMapper.addFavoritesByID(Integer.parseInt(id));
+        return count;
+    }
+    public int delFavoritesByID(String id){
+        int count = templateMapper.delFavoritesByID(Integer.parseInt(id));
+        return count;
+    }
 
 }

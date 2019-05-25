@@ -68,7 +68,12 @@
     </select>
 
     <insert id="addStyle">
-      INSERT Common(menu_uuid,tag_name,source_editor,remark,name,content,tyle)
-      VALUE (#{menu_uuid},#{tag_name},#{source_editor},#{remark},#{name},#{content},#{style})
+      INSERT Common(menu_uuid,tag_name,source_editor,remark,name,content,type)
+      VALUE (#{menu_uuid},#{tag_name},#{source_editor},#{remark},#{name},#{content},#{type})
     </insert>
+
+    <delete id="delStyle">
+        DELETE FROM Common
+        where menu_uuid = #{menu_uuid}
+    </delete>
 </mapper>

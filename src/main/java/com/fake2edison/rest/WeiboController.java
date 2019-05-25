@@ -205,4 +205,16 @@ public class WeiboController {
         return syncMapArrayList;
     }
 
+    @RequestMapping(value = "/getSyncAccount",method = RequestMethod.GET)
+    @ResponseBody
+    public ArrayList<SyncHistory> getSyncAccount(HttpServletRequest request,@RequestParam("id") int id){
+        HttpSession session = request.getSession();
+        User user = (User)session.getAttribute("USER");
+        ArrayList<SyncHistory> syncHistoryArrayList = new ArrayList<SyncHistory>();
+        if(user != null){
+            syncHistoryArrayList = syncHistoryService.selectSyncHistoryByUserIdAndContentId(user.getId(),id);
+        }
+        return syncHistoryArrayList;
+    }
+
 }

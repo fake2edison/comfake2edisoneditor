@@ -142,10 +142,10 @@ public final class ConfigManager {
 				break;
 				
 		}
-		
+		conf.put( "basePath", this.jsonConfig.getString("basePath"));
 		conf.put( "savePath", savePath );
 		conf.put( "rootPath", this.rootPath );
-		
+
 		return conf;
 		
 	}
@@ -175,10 +175,8 @@ public final class ConfigManager {
 //		return this.parentPath + File.separator + ConfigManager.configFileName;
 //		try {
 			// 需要先转为URI再getPath()，否则项目路径带空格或者带中文则无法读取到文件
-			System.out.println("***************************************************");
 //			System.out.println(this.getClass().getClassLoader().getResource("config.json").toURI().getPath());
-			System.out.println(this.getClass().getClassLoader().getResource("config.json").getPath());
-			System.out.println("***************************************************");
+//			System.out.println(this.getClass().getClassLoader().getResource("config.json").getPath());
 //			return this.getClass().getClassLoader().getResource("config.json").getPath();
 		return "/usr/local/src/config.json";
 //		} catch (URISyntaxException e) {

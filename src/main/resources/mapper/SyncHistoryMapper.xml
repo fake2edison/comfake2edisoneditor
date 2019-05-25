@@ -56,4 +56,9 @@
         LEFT JOIN SyncHistory r ON l.contentid = r.contentid
         limit 0,100
     </select>
+
+    <select id="selectSyncHistoryByUserIdAndContentId" resultMap="BaseResultMap">
+        select wname from SyncHistory
+        where uid = #{uid} AND contentid = #{contentid}
+    </select>
 </mapper>

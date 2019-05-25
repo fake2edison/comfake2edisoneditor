@@ -3,6 +3,7 @@ package com.fake2edison.rest;
 import com.fake2edison.entity.User;
 import com.fake2edison.rpc.service.CommonService;
 import com.fake2edison.rpc.service.FavoriteService;
+import com.fake2edison.rpc.service.TemplateService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,6 +27,8 @@ public class FavoritesController {
     private FavoriteService favoriteService;
     @Autowired
     private CommonService commonService;
+    @Autowired
+    private TemplateService templateService;
 
     @RequestMapping(value = "/getFavorites",method = RequestMethod.GET)
     @ResponseBody
@@ -48,22 +51,30 @@ public class FavoritesController {
         int count = 0;
         if(user != null){
             result = favoriteService.addFavorites(user.getId(),uuid,type);
-            count = commonService.addFavoritesByUUID(uuid);
-
+            if(type == 0){
+                count = commonService.addFavoritesByUUID(uuid);
+            }else {
+                count = templateService.addFavoritesByID(uuid);
+            }
         }
         return result;
     }
 
     @RequestMapping(value = "delFavorites",method = RequestMethod.POST)
     @ResponseBody
-    public int delFavorites(HttpServletRequest request,@Param("uuid") String uuid){
+    public int delFavorites(HttpServletRequest request,@Param("uuid") String uuid,@Param("type") int type){
         HttpSession session = request.getSession();
         User user = (User)session.getAttribute("USER");
         int result = 0;
         int count = 0;
         if(user!=null){
             result = favoriteService.delFavorites(user.getId(),uuid);
-            count = commonService.removeFavoritesByUUID(uuid);
+            if(type == 0){
+                count = commonService.removeFavoritesByUUID(uuid);
+            }else {
+                count = templateService.delFavoritesByID(uuid);
+            }
+
         }
         return result;
     }

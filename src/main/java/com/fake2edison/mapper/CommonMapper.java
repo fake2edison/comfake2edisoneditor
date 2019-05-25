@@ -17,4 +17,5 @@ public interface CommonMapper {
     public int addStyleHot(@Param("menu_uuid") String menu_uuid);
     public int countStyle();
     public int addStyle(@Param("menu_uuid") String menu_uuid,@Param("tag_name") String tag_name,@Param("source_editor") String source_editor,@Param("remark") String remark, @Param("name")String name,@Param("content")String content,@Param("type")String type);
+    public int delStyle(@Param("menu_uuid") String menu_uuid);
 }

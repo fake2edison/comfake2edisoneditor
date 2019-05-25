@@ -1,4 +1,5 @@
 {
+    "basePath":"/Users/fake2edison/Desktop",
     "imageActionName": "uploadimage",
     "imageFieldName": "upfile",
     "imageMaxSize": 2048000,
@@ -6,8 +7,8 @@
     "imageCompressEnable": true,
     "imageCompressBorder": 1600,
     "imageInsertAlign": "none",
-    "imageUrlPrefix": "http://39.105.130.67:8881",
-    "imagePathFormat": "/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}",
+    "imageUrlPrefix": "http://bistueditor:8881",
+    "imagePathFormat": "/img/{yyyy}{mm}{dd}/{time}{rand:6}",
     "scrawlActionName": "uploadscrawl",
     "scrawlFieldName": "upfile",
     "scrawlPathFormat": "/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}",

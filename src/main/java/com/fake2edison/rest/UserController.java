@@ -2,6 +2,7 @@ package com.fake2edison.rest;
 
 import com.fake2edison.entity.Common;
 import com.fake2edison.entity.User;
+import com.fake2edison.rpc.service.LogService;
 import com.fake2edison.rpc.service.TemplateService;
 import com.fake2edison.rpc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,8 @@ public class UserController {
     private UserService userService;
     @Autowired
     private TemplateService templateService;
+    @Autowired
+    private LogService logService;
 
     /**
      *  用于用户注册
@@ -100,9 +103,12 @@ public class UserController {
         if(user!=null && user.getIs_admin() == 1){
             result = userService.addAdminByUid(uid);
         }
+        String operation = "添加"+uid+"为管理员";
         if(result == 1){
+            logService.insertLog(user.getId(),operation,"成功");
             return "添加成功";
         }else {
+            logService.insertLog(user.getId(),operation,"失败");
             return "添加失败";
         }
     }
@@ -116,9 +122,12 @@ public class UserController {
         if(user!=null && user.getIs_admin() == 1){
             result = userService.removeAdminByUid(uid);
         }
+        String operation = "移除"+uid+"管理员";
         if(result == 1){
+            logService.insertLog(user.getId(),operation,"成功");
             return "移除成功";
         }else {
+            logService.insertLog(user.getId(),operation,"成功");
             return "移除失败";
         }
     }

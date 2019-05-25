@@ -19,4 +19,6 @@ public interface TemplateMapper {
     public int delTemplateById(@Param("uid")int uid,@Param("id") int id);
     public ArrayList<Template> getTemplateByUserAndPage(@Param("uid") int uid, @Param("page") int page);
     public int getTemplateCountByUser(@Param("uid")int uid);
+    public int addFavoritesByID(@Param("id") int id);
+    public int delFavoritesByID(@Param("id") int id);
 }

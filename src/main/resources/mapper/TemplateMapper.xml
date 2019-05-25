@@ -10,6 +10,7 @@
         <result column="summary" jdbcType="VARCHAR" property="summary"></result>
         <result column="title" jdbcType="VARCHAR" property="title"></result>
         <result column="templateimg" jdbcType="VARCHAR" property="templateimg"></result>
+        <result column="height" jdbcType="INTEGER" property="height"></result>
     </resultMap>
     <select id="selectTemplateByUserId" resultMap="BaseResultMap">
         select
@@ -19,17 +20,19 @@
     </select>
     <select id="getAllTemplate" resultMap="BaseResultMap">
         SELECT
-        *
+        id,uid,statue,intime,summary,title,templateimg
         FROM Template
         WHERE statue = 1
+        ORDER BY height DESC
         limit 0,#{page}
     </select>
     <select id="getFavoriteTemplate" resultMap="BaseResultMap">
         SELECT
-        *
+        Template.id,Template.uid,statue,intime,summary,title,templateimg
         from Template JOIN Favorites
         ON Template.id = Favorites.cid
         WHERE Favorites.uid = #{uid} and Favorites.type = 1
+        ORDER BY height DESC
         limit #{item}
     </select>
     <delete id="delTemplateById">
@@ -55,4 +58,14 @@
         from Template
         WHERE uid = #{uid}
     </select>
+    <update id="addFavoritesByID">
+        UPDATE Template
+        SET height = height + 1
+        WHERE id = #{id}
+    </update>
+    <update id="delFavoritesByID">
+        UPDATE Template
+        SET height = height - 1
+        WHERE id = #{id}
+    </update>
 </mapper>
