@@ -27,7 +27,7 @@ spring:
     name: test
     url: jdbc:mysql://${MYSQL_HOST:39.105.130.67}:${MYSQL_PORT:3306}/Editor?useUnicode=true&characterEncoding=UTF8
     username: root
-    password: nakedking0809
+    password: 
     # 使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
 
